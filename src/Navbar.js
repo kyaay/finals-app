@@ -9,14 +9,14 @@ function Navbar(){
     <div>    
         <div className='navbar'>
             <h1>Techno</h1>
-                <div className='inputdiv'>
+                <div data-testid="inputdiv">
                     <input type="text"placeholder='Search'/>
                 </div>
-            <div className='Links'>
+            <div data-testid="links" className='Links'>
+                <a role="link" href='https://www.youtube.com/watch?v=OgO2U4quFDk'>Home</a>
+                {/* <a href=''>Home</a>
                 <a href=''>Home</a>
-                <a href=''>Home</a>
-                <a href=''>Home</a>
-                <a href=''>Home</a>   
+                <a href=''>Home</a>    */}
               
             </div>    
     
