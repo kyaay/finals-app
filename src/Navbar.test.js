@@ -7,6 +7,7 @@ describe("Check if there is a nav bar", () => {
       const displayLogo = screen.getByTestId("logo");
       expect(displayLogo).toBeInTheDocument();
 
+      //if logo is an image
       // const displayLogo = document.querySelector("img");
       // expect(displayLogo.src).toContain("logo");
     });
@@ -24,12 +25,28 @@ describe("Check if there is a nav bar", () => {
       expect(container).toBeInTheDocument();
     });
 
+    it("has a home button", () => {
+      render(<Navbar />);
+      const home = screen.getByText('home').closest('span').closest('a');
+      expect(home).toBeInTheDocument();
+    });
 
+    it("has a contact us button", () => {
+      render(<Navbar />);
+      const contact_us = screen.getByText('contact_page').closest('span').closest('a');
+      expect(contact_us).toBeInTheDocument();
+    });
 
     it("has a profile button", () => {
       render(<Navbar />);
-      const home = screen.getByText('home').closest('a');
-      expect(home).toBeInTheDocument();
+      const profile = screen.getByText('account_circle').closest('span').closest('a');
+      expect(profile).toBeInTheDocument();
+    });
+
+    it("has an add to card", () => {
+      render(<Navbar />);
+      const cart = screen.getByText('shopping_cart').closest('span').closest('a');
+      expect(cart).toBeInTheDocument();
     });
 
     // it("has an add to cart button", () => {
