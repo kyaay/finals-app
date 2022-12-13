@@ -1,7 +1,8 @@
 @import './Variables.scss';
 
 body{
-    margin: 0px;
+    margin: 0;
+    padding: 0; 
 }
 
 .navbar {
@@ -57,4 +58,12 @@ body{
 span.size-30 {
     font-size: 30px;
     font-variation-settings: 'OPSZ' 30;
+  }
+
+  .featured{
+    font-family: $titlefont;
+    width: 100%;
+    margin: 10px;
+    color: $defaultcolor;
+    border-bottom: 2px solid $defaultcolor;
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Styles/Navbar.scss'
+import './Styles/Navbar.scss';
 
 
 function Navbar(){
@@ -15,12 +15,11 @@ function Navbar(){
                     <input type="text"placeholder='Search'/>
                 </div>
             <div className='Links'>
-                <a href='home'><span class="material-symbols-outlined size-30">home</span></a>
-                <a href='contact-us'><span class="material-symbols-outlined size-30">contact_page</span></a>
-                <a href='profile'><span class="material-symbols-outlined size-30">account_circle</span></a>
-                <a href='cart'><span class="material-symbols-outlined size-30">shopping_cart</span></a>                 
+                <a href='home'><span className="material-symbols-outlined size-30">home</span></a>
+                <a href='contact-us'><span className="material-symbols-outlined size-30">contact_page</span></a>
+                <a href='profile'><span className="material-symbols-outlined size-30">account_circle</span></a>
+                <a href='cart'><span className="material-symbols-outlined size-30">shopping_cart</span></a>                 
             </div>    
-    
         </div>
      </div>
     )
