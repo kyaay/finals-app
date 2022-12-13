@@ -2,14 +2,14 @@ import './Styles/ProductList.scss';
 
 const ProductList = ({products}) => {
     return (
-        <div className = "product-list">
+        <div className = "product-list" data-testid="product-list">
             {
                 products.map((product,index) => {
                     return (
                         <div className = "item" key = {index}>
                             <img src = {product.thumbnail} alt = "image1"></img>
                             <div className='prodtitle'>
-                                <h3>Title: {product.title} </h3>
+                                <h3>{product.title} </h3>
                             </div>
                             <div className='price'>
                                 <label>Price: ${product.price} </label>
