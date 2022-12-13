@@ -22,21 +22,15 @@ describe("Check if there is a nav bar", () => {
       render(<Navbar />);
       const container = screen.getByTestId('links');
       expect(container).toBeInTheDocument();
-
-      const widget = mount(<Navbar {...container} />);
-
-      expect(widget.find('a').find('span').text().contains('home')).toBe(true);
     });
 
 
 
-    // it("has a profile button", () => {
-    //     render(<Navbar />);
-    //   const homeLink = screen.getByRole("link");
-    //   expect(screen.getByRole("link")).toBeInTheDocument();
-    //   const profile_btn = screen.getByTestId("links");
-    //   expect(profile_btn).toBeInTheDocument();
-    // });
+    it("has a profile button", () => {
+      render(<Navbar />);
+      const home = screen.getByText('home').closest('a');
+      expect(home).toBeInTheDocument();
+    });
 
     // it("has an add to cart button", () => {
     //   const add_cart = screen.getByTestId("add-to-cart");
