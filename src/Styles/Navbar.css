@@ -1,10 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   width: 100%;
   height: 80px;
   background-color: rgb(35, 35, 35);
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  margin: 0;
+}
+
+.logo {
+  font-family: "Rubik 80s Fade", cursive;
+  color: rgb(111, 230, 111);
+  padding: 20px;
 }
 
 .navbar a {
@@ -12,23 +23,46 @@
   font-size: 25px;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 10px;
+  margin: 20px;
 }
 
-.navbar :hover {
+.navbar a:hover {
   color: rgb(111, 230, 111);
 }
 
 .Links {
-  margin-right: 30px;
+  margin-left: 70px;
+  width: 500px;
 }
 
-.inputdiv {
+.inputBox {
   width: 30%;
-  margin-right: 19%;
+  margin-right: 25%;
+  position: relative;
 }
 
-input {
+.inputBox input {
   width: 100%;
   height: 20px;
-}/*# sourceMappingURL=navbar.css.map */
+  padding: 7px;
+  margin-left: 20%;
+  border: 1px solid rgb(100, 100, 100);
+  background: rgb(35, 35, 35);
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  font-size: 1em;
+}
+
+span.size-30 {
+  font-size: 30px;
+  font-variation-settings: "OPSZ" 30;
+}
+
+.featured {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin: 10px;
+  color: rgb(100, 100, 100);
+  border-bottom: 2px solid rgb(100, 100, 100);
+}/*# sourceMappingURL=Navbar.css.map */
