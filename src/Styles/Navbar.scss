@@ -28,17 +28,20 @@ nav{
 }
 .navlinks{
     list-style: none;
+    padding-right: 20px;
+
+    li a {
+        color: $defaultcolor;
+    }
+
+    li a:hover {
+        color: $themecolor;
+    }
 }
-.navlinks li a {
-    color: $defaultcolor;
-}
+
 a{
     transition: .6s;
 }
-.navlinks li a:hover {
-    color: $themecolor;
-}
-
 
 input{
     margin-left: 50px;
@@ -60,10 +63,6 @@ input :focus{
 }
 
 
-span.size-30 {
-    font-size: 30px;
-    font-variation-settings: 'OPSZ' 30;
-  }
 .logo {
     font-family: $logofont;
     color: $themecolor;
