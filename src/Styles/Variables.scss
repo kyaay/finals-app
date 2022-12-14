@@ -6,3 +6,9 @@ $logofont: 'Rubik 80s Fade', cursive;
 $navcolor: rgb(35, 35, 35);
 $themecolor: rgb(111, 230, 111);
 $defaultcolor: rgb(100, 100, 100);
+
+@mixin features {
+    width: 100%;
+    border-bottom: 5px solid $defaultcolor;
+    color: $defaultcolor;
+}

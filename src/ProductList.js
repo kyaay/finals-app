@@ -6,7 +6,7 @@ const ProductList = ({products}) => {
             {
                 products.map((product,index) => {
                     return (
-                        <div className = "item" key = {index}>
+                        <div className = "product" key = {index}>
                             <img src = {product.thumbnail} alt = "image1"></img>
                             <div className='prodtitle'>
                                 <h3>{product.title} </h3>

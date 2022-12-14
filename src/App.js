@@ -8,9 +8,10 @@ import ProductList from "./ProductList";
 const App = () => {
   const [products,setProducts] = useState([]);
 
+
   const getproductRequest = async () => {
     const url = 'https://dummyjson.com/products/category/laptops';
-
+    
     await fetch (url)
     .then(response => response.json())
     .then(response => {
@@ -28,13 +29,16 @@ const App = () => {
       <div>
         <Navbar/>
       </div>
-      <div>
-        <div className="bodycontent">
-          <h1 className="featured">Featured Products</h1>
-        </div>
-        <div>
-          <ProductList products = {products}/>
-        </div>     
+      <div className="container">
+          <div className="bodycontent">
+            <h1 className="featured">Featured Products</h1>
+          </div>
+          <div className="proddiv">
+            <ProductList products = {products}/>
+          </div>
+          <div className="bodycontent2">
+            <h1 className="featured">Phones Products</h1>
+          </div>
       </div>
     </div>
   );
