@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import React, { useState, useEffect } from 'react';
 import ProductList from "./ProductList";
 
@@ -39,6 +40,9 @@ const App = () => {
           <div className="bodycontent2">
             <h1 className="featured">Phones Products</h1>
           </div>
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );
