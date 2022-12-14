@@ -1,0 +1,18 @@
+.main-footer {
+        color: white;
+        background-color: #383737;
+        padding-top: 3em;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.col-sm {
+    text-align: center;
+}
+/*.list-support {
+    list-style: none;
+    display: inline;
+    padding: 0px 20px;
+}*/
