@@ -18,6 +18,11 @@ const ProductList = ({products}) => {
                                 <button className="btn Add">Add to Cart</button>
                                 <button className="btn Buy">Buy Now</button>
                             </div>
+                            
+                            <div className='overlay'>
+                                <div className='sampleText'>Hello World</div>                                
+                            </div>
+                          
                         </div>)
                     }
                 )
