@@ -7,7 +7,12 @@ const ProductList = ({products}) => {
                 products.map((product,index) => {
                     return (
                         <div className = "product" key = {index}>
-                            <img src = {product.thumbnail} alt = "image1"></img>
+                            <div className='overlaycontainer'>
+                                <img src = {product.thumbnail} alt = "image1"></img>
+                                <div className='overlay'>
+                                    <div className='sampleText'>Hello World</div>                                
+                                </div>
+                            </div>
                             <div className='prodtitle'>
                                 <h3>{product.title} </h3>
                             </div>
@@ -18,6 +23,8 @@ const ProductList = ({products}) => {
                                 <button className="btn Add">Add to Cart</button>
                                 <button className="btn Buy">Buy Now</button>
                             </div>
+        
+                          
                         </div>)
                     }
                 )
