@@ -34,7 +34,7 @@ nav {
 }
 
 a {
-  transition: all 0.5 ease 0s;
+  transition: 0.6s;
 }
 
 .navlinks li a:hover {
@@ -50,7 +50,7 @@ input {
   background: rgb(35, 35, 35);
   border-radius: 5px;
   outline-color: rgb(111, 230, 111);
-  transition: 0.3s;
+  transition: 0.7s;
   color: white;
   font-size: 1em;
 }
