@@ -1,0 +1,52 @@
+@import './Variables.scss';
+
+.productImg{
+    display: flex;
+    margin: 20px;
+    height: 300px;
+    width: 300px;
+    border-style: groove;
+}
+
+.productDetails{
+    position: absolute;
+    margin: 20px; 
+    width: 400px;
+    right: 30%;
+
+    hr.solid {
+        border-top: 2px solid $defaultcolor;
+        margin-top: 20px;
+      }
+
+}
+
+.checkoutBt{
+    position: absolute;   
+    margin: 20px; 
+    right: 10%;
+    
+    h1{
+        color: $themecolor;
+    }
+    button{
+        background-color: $themecolor;
+        color: white;
+        width: 200px;
+        padding: 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 20px;
+    }
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    display: table;
+    clear: both;
+  }

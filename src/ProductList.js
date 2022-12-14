@@ -16,7 +16,7 @@ const ProductList = ({products}) => {
                             </div>
                             <div className='prodbutton'>
                                 <button className="btn Add">Add to Cart</button>
-                                <button className="btn Buy">Buy Now</button>
+                                <a href="/BuyNow" className="btn Buy">Buy Now</a>
                             </div>
                         </div>)
                     }

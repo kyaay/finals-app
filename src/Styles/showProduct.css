@@ -1,0 +1,47 @@
+.productImg {
+  display: flex;
+  margin: 20px;
+  height: 300px;
+  width: 300px;
+  border-style: groove;
+}
+
+.productDetails {
+  position: absolute;
+  margin: 20px;
+  width: 400px;
+  right: 30%;
+}
+.productDetails hr.solid {
+  border-top: 2px solid rgb(100, 100, 100);
+  margin-top: 20px;
+}
+
+.checkoutBt {
+  position: absolute;
+  margin: 20px;
+  right: 10%;
+}
+.checkoutBt h1 {
+  color: rgb(111, 230, 111);
+}
+.checkoutBt button {
+  background-color: rgb(111, 230, 111);
+  color: white;
+  width: 200px;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  display: table;
+  clear: both;
+}/*# sourceMappingURL=showProduct.css.map */
