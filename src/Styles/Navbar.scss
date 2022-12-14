@@ -1,10 +1,72 @@
 @import './Variables.scss';
 
 body{
+    box-sizing: border-box;
     margin: 0;
     padding: 0; 
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: $navcolor;
+    align-items: center;
+    padding: 10px 5%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+li {
+    list-style: none;
+    display: inline;
+    padding: 0px 20px;
+}
+
+.navlinks{
+    list-style: none;
+}
+.navlinks li a {
+    color: $defaultcolor;
+}
+a{
+    transition: all 0.5 ease 0s;
+}
+.navlinks li a:hover {
+    color: $themecolor;
+}
+
+
+input{
+    margin-left: 50px;
+    width: 450px;
+    height: 20px;
+    padding: 7px;
+    border: 1px solid $defaultcolor;
+    background: $navcolor;
+    border-radius: 5px;
+    outline-color: $themecolor;
+    transition: 0.3s;
+    color: white;
+    font-size: 1em;
+
+}
+input :focus{
+    border-color: $themecolor;
+    box-shadow: 0 0 8px $themecolor;
+}
+
+
+span.size-30 {
+    font-size: 30px;
+    font-variation-settings: 'OPSZ' 30;
+  }
+.logo {
+    font-family: $logofont;
+    color: $themecolor;
+    padding: 0px 20px 0px 0px;
+}
+
+/*
 .navbar {
     width: 100%;
     height: 80px;
@@ -12,6 +74,7 @@ body{
     display: flex;
     align-items: center;
     margin: 0;
+    position: fixed;
 }
 .logo {
     font-family: $logofont;
@@ -64,6 +127,9 @@ span.size-30 {
     font-family: $titlefont;
     width: 100%;
     margin: 10px;
+    padding-top: 100px;
     color: $defaultcolor;
     border-bottom: 2px solid $defaultcolor;
   }
+
+  */
