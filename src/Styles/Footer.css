@@ -11,6 +11,18 @@
 .col-sm {
     text-align: center;
 }
+
+.list-support a{
+    color: white;
+    text-decoration: none;        
+}
+.list-unstyled a{
+    color: white;
+    text-decoration: none;        
+}
+a:hover {
+    text-decoration: underline;
+  }
 /*.list-support {
     list-style: none;
     display: inline;
