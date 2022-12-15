@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import React, { useState, useEffect } from 'react';
-// import ProductList from "./ProductList";
-import ShowProduct from "./showProduct";
+import ProductList from "./ProductList";
+// import ShowProduct from "./showProduct";
 
 //things to install in react
 // npm install sass
@@ -34,8 +34,8 @@ const App = () => {
           <h1 className="featured">Featured Products</h1>
         </div>
         <div>
-          {/* <ProductList products = {products}/> */}
-          <ShowProduct/>
+          <ProductList products = {products}/>
+          {/* <ShowProduct/> */}
         </div>     
       </div>
     </div>

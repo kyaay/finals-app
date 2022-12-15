@@ -2,15 +2,16 @@
 
 .productImg{
     display: flex;
-    margin: 20px;
-    height: 300px;
-    width: 300px;
+    margin-left: 10%;
+    margin-top: 6%;
+    height: 350px;
+    width: 350px;
     border-style: groove;
 }
 
 .productDetails{
     position: absolute;
-    margin: 20px; 
+    margin: 25px; 
     width: 400px;
     right: 30%;
 
@@ -22,21 +23,38 @@
 }
 
 .checkoutBt{
-    position: absolute;   
-    margin: 20px; 
+    position: absolute; 
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px; 
+    padding: 0 30px;
     right: 10%;
-    
+    height: 40%;
+    background-color: $navcolor;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 10px 20px;
     h1{
         color: $themecolor;
     }
     button{
-        background-color: $themecolor;
+        background-color: $defaultcolor;
         color: white;
         width: 200px;
         padding: 20px;
         font-size: 20px;
         border: none;
         border-radius: 20px;
+    }
+    button:hover{
+        background-color: rgb(86, 202, 86);
+    }
+
+    .quantity label{
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 20%;
+        font-size: 20px;
+        color: white;        
     }
 }
 

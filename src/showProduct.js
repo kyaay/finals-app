@@ -2,18 +2,6 @@
 import './Styles/showProduct.scss';
 
 const ShowProduct = () =>{
-    // const[product, setProduct] = useState([
-    //     {
-    //         "id":'6',
-    //         "title":"MacBook Pro",
-    //         "description":"MacBook Pro 2021 with mini-LED display may launch between September, November",
-    //         "price":1749,
-    //         "discountPercentage":11.02,
-    //         "rating":4.57,"stock":83,"brand":"APPle","category":"laptops",
-    //         "thumbnail":"https://i.dummyjson.com/data/products/6/thumbnail.png",            
-    //     },
-
-    // ])
 
     return(
         <div className="singleProd">
@@ -31,12 +19,16 @@ const ShowProduct = () =>{
                 <p><b>Rating: </b>4.57%</p>
                 <p><b>Stock: </b>83</p>
                 <p><b>Brand: </b>Apple</p>
-                <p><b>Category: </b>laptops</p>
+                <p><b>Category: </b>laptop</p>
             </div>
             </div>
             <div className="column">
             <div className="checkoutBt">
                 <h1>₱ 1,749.00</h1>
+                <div className='quantity'>
+                    <label>Quantity:</label>
+                    <input type="number" min="1" max="100"></input>
+                </div>
                 <button>Checkout</button>
 
             </div>
