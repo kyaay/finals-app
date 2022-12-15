@@ -11,20 +11,23 @@
 }
 
 .proddiv {
-    width: 1000px;
-    height: 400px;
-    margin:0px auto;
+    width: 1200px;
+    height: auto;
 }
 
 .product{
-    width: 400px;
+    width: 350px;
     padding: 20px;
     background-color: #f1f1f1;
-    border: 0.5px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 10px 20px;;
     float: left;
-    margin: 10px;
+    margin: 10px 5px;
     break-inside: avoid;
     border-radius: 5px;
+
+    .prodtitle{
+        text-align: center;
+    }
 }
 
 
@@ -36,6 +39,7 @@
     width: 100%;
     height: 200px;
     object-fit: contain;
+    
 }
 
 .container{
@@ -83,7 +87,7 @@
 .prodbutton{
     width: 100%;
     flex-wrap: wrap;
-    align-content: center;
+    text-align: center;
 }
 .btn {
     border: 1px solid #3498db;

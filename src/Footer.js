@@ -31,7 +31,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr />
-                <div className='row'>
+                <div className='row-bottom'>
                     <p className='col-sm'>
                         &copy;{new Date().getFullYear()} TECHNO INC | All Rights Reserved 
                     </p>
