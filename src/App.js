@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import React, { useState, useEffect } from 'react';
 import ProductList from "./ProductList";
+import Login from "./login";
 
 //things to install in react
 // npm install sass
@@ -27,7 +28,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <div>
+      <Login/>
+      {/* <div>
         <Navbar/>
       </div>
       <div className="container">
@@ -43,7 +45,7 @@ const App = () => {
       </div>
       <div>
         <Footer/>
-      </div>
+      </div> */}
     </div>
   );
 }

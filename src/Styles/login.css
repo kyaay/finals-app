@@ -1,0 +1,23 @@
+.logo h1 {
+  font-family: "Rubik 80s Fade", cursive;
+  color: rgb(111, 230, 111);
+  text-align: center;
+}
+
+.login {
+  width: 30%;
+  height: 70%;
+  margin-left: 35%;
+  border-style: groove;
+}
+.login h1 {
+  text-align: center;
+}
+.login h2 {
+  text-align: center;
+}
+
+.inputfld input {
+  width: 50%;
+  background-color: white;
+}/*# sourceMappingURL=login.css.map */
