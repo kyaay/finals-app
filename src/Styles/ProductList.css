@@ -15,21 +15,23 @@
 }
 
 .proddiv {
-  width: 1000px;
-  height: 400px;
-  margin: 0px auto;
+  width: 1200px;
+  height: auto;
 }
 
 .product {
-  width: 400px;
+  width: 350px;
   padding: 20px;
   background-color: #f1f1f1;
-  border: 0.5px solid gray;
+  box-shadow: rgba(0, 0, 0, 0.35) 5px 10px 20px;
   float: left;
-  margin: 10px;
+  margin: 10px 5px;
   -moz-column-break-inside: avoid;
        break-inside: avoid;
   border-radius: 5px;
+}
+.product .prodtitle {
+  text-align: center;
 }
 
 .overlaycontainer:hover .overlay {
@@ -86,7 +88,7 @@
 .prodbutton {
   width: 100%;
   flex-wrap: wrap;
-  align-content: center;
+  text-align: center;
 }
 
 .btn {
