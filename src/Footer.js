@@ -53,9 +53,9 @@ const Footer = () => {
                            <div className='col'>
                             <h3>Stay Connected</h3>
                             <ul className='stay_connected'>
-                            <li><a href='home'><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href='contact-us'><i class="fa-brands fa-google"></i></a></li>
-                            <li><a href='profile'><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href='home'><i class="fa fa-facebook fa-2x"></i></a></li>
+                            <li><a href='contact-us'><i class="fa fa-google fa-2x"></i></a></li>
+                            <li><a href='profile'><i class="fa fa-twitter fa-2x"></i></a></li>
                             </ul>
                         </div>
                     </div>
