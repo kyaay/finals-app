@@ -1,6 +1,8 @@
+import { useHistory } from 'react-router';
 import './Styles/ProductList.scss';
 
 const ProductList = ({products}) => {
+    let history = useHistory();
     return (
         <div className = "product-list" data-testid="product-list">
             {
@@ -16,7 +18,7 @@ const ProductList = ({products}) => {
                             </div>
                             <div className='prodbutton'>
                                 <button className="btn Add">Add to Cart</button>
-                                <a href="/BuyNow" className="btn Buy">Buy Now</a>
+                                <a className="btn Buy" onClick={() => {history.push('/buy')}}>Buy Now</a>
                             </div>
                         </div>)
                     }
