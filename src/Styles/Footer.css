@@ -11,6 +11,39 @@
 .col-sm {
     text-align: center;
 }
+
+.list-support a{
+    color: white;
+    text-decoration: none;        
+}
+
+.list-support li{
+    padding-left: 0;
+}
+.list-unstyled li{
+    padding-left: 0;
+}
+.list-unstyled a{
+    color: white;
+    text-decoration: none;        
+}
+.col h3{
+    padding-left: 14%;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.col {
+    float: left;
+    width: 20%;
+  }
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 /*.list-support {
     list-style: none;
     display: inline;

@@ -9,29 +9,29 @@ const Footer = () => {
                 <div className='row'>
                     {/*Column1*/}
                     <div className='col'>
-                        <h4> TECHNO INC.</h4>
+                        <h3> TECHNO INC.</h3>
                         <ul className='list-unstyled'>
-                            <li>Lenovo</li>
+                            <li><a href='lenovo'>Lenovo</a></li>
                             <br />
-                            <li>Acer</li>
+                            <li><a href='Ace'>Ace</a></li>
                             <br />
-                            <li>Asus</li>
+                            <li><a href='Asus'>Asus</a></li>
                         </ul>
                     </div>
                     {/*Column2*/}
                     <div className='col'>
-                        <h4>Support</h4>
+                        <h3>Support</h3>
                         <ul className='list-support'>
-                            <li>Discord</li>
+                            <li><a href='/discord'>Discord</a></li>
                             <br />
-                            <li>Fb</li>
+                            <li><a href='/facebook'>Facebook</a></li>
                             <br />
-                            <li>Instagram</li>
+                            <li><a href='/instagram'>Instagram</a></li>
                         </ul>
                     </div>
                 </div>
                 <hr />
-                <div className='row'>
+                <div className='row-bottom'>
                     <p className='col-sm'>
                         &copy;{new Date().getFullYear()} TECHNO INC | All Rights Reserved 
                     </p>
