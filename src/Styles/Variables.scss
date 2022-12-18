@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Rubik+80s+Fade&display=swap');
+
 //Fonts
 $titlefont: Arial, Helvetica, sans-serif;
 $logofont: 'Rubik 80s Fade', cursive;
+$loginfont: 'Poppins', sans-serif;
 
 //Colors
 $navcolor: rgb(35, 35, 35);
@@ -13,3 +16,6 @@ $defaultcolor: rgb(100, 100, 100);
     color: $defaultcolor;
     margin-bottom: 50px;
 }
+
+//span design
+$span_padding : 30px 10px 10px;
