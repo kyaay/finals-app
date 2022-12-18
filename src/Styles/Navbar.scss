@@ -3,7 +3,9 @@
 body{
     box-sizing: border-box;
     margin: 0;
-    padding: 0; 
+    padding: 0;  
+    background: #26272b;  
+    font-family: $textfont;
 }
 
 header{
@@ -18,7 +20,7 @@ header{
     padding-bottom: 10px;
 }
 
-li {
+.navlinks li {
     list-style: none;
     display: inline;
     padding: 0px 20px;
@@ -51,7 +53,7 @@ input{
     border-radius: 5px;
     outline-color: $themecolor;
     transition: 0.7s;
-    color: white;
+    color: $textcolor;
     font-size: 1em;
 
 }

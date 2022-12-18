@@ -1,51 +1,145 @@
-.main-footer {
-        color: white;
-        background-color: #383737;
-        padding-top: 3em;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        font-family: "Lucida Console", "Courier New", monospace;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Rubik+80s+Fade&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  background-color: rgb(35, 35, 35);
+  padding: 50px 0;
+}
+
+.footcontainer {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex: wrap;
+}
+
+.row ul {
+  list-style: none;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgb(111, 230, 111);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: rgb(111, 230, 111);
+  padding-left: 10px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #fff;
 }
 
 .col-sm {
-    text-align: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px;
+  letter-spacing: 0.5em;
+}
+
+/*
+.main-footer {
+    color: white;
+    background-color: #383737;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.col-sm {
+text-align: center;
 }
 
 .list-support a{
-    color: white;
-    text-decoration: none;        
+color: white;
+text-decoration: none;        
 }
 
 .list-support li{
-    padding-left: 0;
+padding-left: 0;
 }
 .list-unstyled li{
-    padding-left: 0;
+padding-left: 0;
 }
 .list-unstyled a{
-    color: white;
-    text-decoration: none;        
+color: white;
+text-decoration: none;        
 }
 .col h3{
-    padding-left: 14%;
+padding-left: 14%;
 }
 a:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
 .col {
-    float: left;
-    width: 20%;
-  }
-  
+float: left;
+width: 20%;
+}
+
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-/*.list-support {
-    list-style: none;
-    display: inline;
-    padding: 0px 20px;
-}*/
+content: "";
+display: table;
+clear: both;
+}
+
+
+*//*# sourceMappingURL=Footer.css.map */
