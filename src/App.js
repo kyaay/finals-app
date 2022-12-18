@@ -87,5 +87,8 @@ export default App;
             <Footer/>
             </div>
       </div>
+      <div>
+        <Footer />
+      </div>
     </Router>
 */
