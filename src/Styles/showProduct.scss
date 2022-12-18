@@ -1,9 +1,8 @@
 @import './Variables.scss';
 
 .productImg{
-    display: flex;
-    margin-left: 10%;
-    margin-top: 6%;
+    margin-left: 15%;
+    margin-top: 40%;
     height: 350px;
     width: 350px;
     border-style: groove;
@@ -11,9 +10,9 @@
 
 .productDetails{
     position: absolute;
-    margin: 25px; 
-    width: 400px;
-    right: 30%;
+    margin-top: 15%;
+    margin-left: 10%; 
+    width: 350px;
 
     hr.solid {
         border-top: 2px solid $defaultcolor;
@@ -25,10 +24,9 @@
 .checkoutBt{
     position: absolute; 
     text-align: center;
-    margin-top: 20px;
-    margin-left: 20px; 
+    margin-top: 17%;
+    margin-left: 40%; 
     padding: 0 30px;
-    right: 10%;
     height: 40%;
     background-color: $navcolor;
     border-radius: 10%;
@@ -60,7 +58,7 @@
 
 .column {
     float: left;
-    width: 50%;
+    width: 30%;
 }
   
   /* Clear floats after the columns */
@@ -68,3 +66,7 @@
     display: table;
     clear: both;
   }
+
+#quantity{
+    width: 30%;
+}

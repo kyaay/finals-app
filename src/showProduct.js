@@ -27,7 +27,7 @@ const ShowProduct = () =>{
                 <h1>₱ 1,749.00</h1>
                 <div className='quantity'>
                     <label>Quantity:</label>
-                    <input type="number" min="1" max="100"></input>
+                    <input type="number" min="1" max="100" id='quantity'></input>
                 </div>
                 <button>Checkout</button>
 
