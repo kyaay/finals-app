@@ -142,6 +142,12 @@ input[type="submit"]{
     border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
+    transition: all 0.5s ease;
+}
+input[type="submit"]:hover{
+    border: 2px solid $themecolor;
+    color: $themecolor;
+    background-color: #23242a;
 }
 input[type="submit"]:active{
     opacity: 0.8;
