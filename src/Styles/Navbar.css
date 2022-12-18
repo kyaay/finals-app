@@ -37,13 +37,19 @@ nav {
   color: rgb(111, 230, 111);
 }
 
-a {
-  transition: 0.6s;
+.Links {
+  margin-left: 300px;
+  width: 500px;
 }
 
-input {
-  margin-left: 50px;
-  width: 450px;
+.inputBox {
+  width: 30%;
+  margin-right: 25%;
+  position: relative;
+}
+
+.inputBox input {
+  width: 200%;
   height: 20px;
   padding: 7px;
   border: 1px solid rgb(100, 100, 100);
