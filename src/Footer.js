@@ -61,7 +61,6 @@ const Footer = () => {
         </div>
     )
 }
-//guys di pani final hehe
 
 
 export default Footer;

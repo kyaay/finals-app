@@ -30,36 +30,66 @@ const App = () => {
 
   return (
     <Router>
+      <div className="App">
+      <div>
+        <Navbar/>
+      </div>
       <Switch>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <div className="App">
-          <div>
-            <Navbar/>
-          </div>
-          
-            <Route path={"/home"}>
-              <div>
+        <Route path={"/home"}>
+            <div className="container">
                 <div className="bodycontent">
                   <h1 className="featured">Featured Products</h1>
                 </div>
-                <div>
+                <div className="proddiv">
                   <ProductList products = {products}/>
-                  {/* <ShowProduct/> */}
-                </div>     
-              </div>
-            </Route>
+                </div>
+                <div className="bodycontent2">
+                  <h1 className="featured">Phones Products</h1>
+                </div>
+            </div>
+         </Route>
             <Route path={"/buy"}>
               <ShowProduct />
             </Route>
-          </div>
       </Switch>
       <div>
-        <Footer />
+          <Footer/>
       </div>
-    </Router>
+    </div>
+  </Router>
   );
 }
 
 export default App;
+
+/*
+ <Router>
+      <div className="App">
+        <div>
+          <Navbar/>
+        </div>
+        <Switch>
+            <Route path={"/home"}>
+                <div>
+                  <div className="bodycontent">
+                    <h1 className="featured">Featured Products</h1>
+                  </div>
+                      <div>
+                        <ProductList products = {products}/>
+                        { <ShowProduct/> }
+                      </div>     
+                    </div>
+                </Route>
+                <Route path={"/buy"}>
+                  <ShowProduct />
+                </Route>
+         </Switch>
+            <div>
+            <Footer/>
+            </div>
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </Router>
+*/
