@@ -1,4 +1,4 @@
-import { fireEvent, getByRole, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Navbar from './Navbar';
 
 describe("Check if there is a nav bar", () => {
@@ -49,8 +49,4 @@ describe("Check if there is a nav bar", () => {
       expect(cart).toBeInTheDocument();
     });
 
-    // it("has an add to cart button", () => {
-    //   const add_cart = screen.getByTestId("add-to-cart");
-    //   expect(add_cart).toBeInTheDocument();
-    // });
 });
