@@ -1,35 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Rubik+80s+Fade&display=swap");
 .bodycontent {
   padding-top: 100px;
   width: 100%;
-  border-bottom: 5px solid rgb(100, 100, 100);
-  color: rgb(100, 100, 100);
+  border-bottom: 5px solid #bbb;
+  color: #bbb;
   margin-bottom: 50px;
+}
+
+.bodycontent h1 {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  display: inline-block;
 }
 
 .bodycontent2 {
-  padding-top: 900px;
+  padding-top: 100px;
   width: 100%;
-  border-bottom: 5px solid rgb(100, 100, 100);
-  color: rgb(100, 100, 100);
+  border-bottom: 5px solid #bbb;
+  color: #bbb;
   margin-bottom: 50px;
+  display: inline-block;
+}
+
+.bodycontent2 h1 {
+  font-weight: 300;
+  letter-spacing: 0.1em;
 }
 
 .proddiv {
-  width: 1000px;
-  height: 400px;
-  margin: 0px auto;
+  margin-left: 70px;
 }
 
 .product {
-  width: 400px;
+  width: 350px;
   padding: 20px;
-  background-color: #f1f1f1;
-  border: 0.5px solid gray;
+  background: #1c1c1c;
+  box-shadow: rgba(30, 80, 49, 0.35) 5px 10px 20px;
   float: left;
-  margin: 10px;
+  margin: 10px 5px;
   -moz-column-break-inside: avoid;
        break-inside: avoid;
   border-radius: 5px;
+}
+.product .prodtitle {
+  color: whitesmoke;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.2em;
 }
 
 .overlaycontainer:hover .overlay {
@@ -58,7 +75,8 @@
   height: 200px;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: rgb(114, 114, 114);
+  background-color: #2c2c2c;
+  cursor: pointer;
 }
 
 .overlaycontainer {
@@ -66,13 +84,13 @@
 }
 
 .sampleText {
-  color: black;
-  font-size: 20px;
+  color: rgb(234, 255, 228);
+  font-size: 13px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: justify;
 }
 
 .price {
@@ -81,12 +99,13 @@
   padding-bottom: 20px;
   width: 100%;
   text-align: center;
+  letter-spacing: 0.1em;
 }
 
 .prodbutton {
   width: 100%;
   flex-wrap: wrap;
-  align-content: center;
+  text-align: center;
 }
 
 .btn {
@@ -110,126 +129,5 @@
 
 .btn:hover {
   color: rgb(111, 230, 111);
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background: #3498db;
-  z-index: -1;
-  transition: 0.8s;
-  top: 0;
-  border-radius: 0 0 50% 50%;
-}
-
-.btn:hover::before {
-  height: 180%;
-}
-
-/*
-.btn::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background: #3498db;
-    z-index: -1;
-    transition: 0.8s;
-    top:0;
-    border-radius: 0 0 50% 50%;
-}
-
-.btn:hover::before{
-    height: 180%;
-}
-*/
-/*
-.bodycontent{
-
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.product-list {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
-    font-family: $titlefont;
-}
-
-
-.item {
-    width: 400px;
-    height: 370px;
-    border: 1px solid black;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 10px 10px;
-}
-.item img {
-    height: 200px;
-    width: 350px;
-    font-size: 30px;
-}
-
-@media screen  and (max-width:1200px){
-    .item{
-        width: 40%;
-    }
-}
-@media screen and (max-width:600px) {
-    .item{
-        width: 90%;
-    }
-}
-
-.price {
-    color: $themecolor;
-    font-weight: 900;
-    padding-bottom: 20px;
-}
-
-.btn {
-    border: 1px solid #3498db;
-    background: none;
-    padding: 10px 20px;
-    font-size:  20px;
-    font-family: $titlefont;
-    cursor: pointer;
-    margin: 10px;
-    transition: 0.8s;
-    position: relative;
-    overflow: hidden;
-}
-.Add,.Buy{
-    color:#3498db;
-}
-.btn:hover{
-    color:white;
-}
-.btn::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background: #3498db;
-    z-index: -1;
-    transition: 0.8s;
-    top:0;
-    border-radius: 0 0 50% 50%;
-}
-
-.btn:hover::before{
-    height: 180%;
-}
-*//*# sourceMappingURL=ProductList.css.map */
+  border: 1px solid rgb(111, 230, 111);
+}/*# sourceMappingURL=ProductList.css.map */

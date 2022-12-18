@@ -12,7 +12,7 @@ const ProductList = ({products}) => {
                             <div className='overlaycontainer'>
                                 <img src = {product.thumbnail} alt = "image1"></img>
                                 <div className='overlay'>
-                                    <div className='sampleText'>Hello World</div>                                
+                                    <div className='sampleText'><h3>Product description:</h3><p> ${product.description}</p></div>                                
                                 </div>
                             </div>
                             <div className='prodtitle'>
