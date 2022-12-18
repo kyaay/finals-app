@@ -10,14 +10,16 @@
 .bodycontent h1 {
   font-weight: 300;
   letter-spacing: 0.1em;
+  display: inline-block;
 }
 
 .bodycontent2 {
-  padding-top: 900px;
+  padding-top: 100px;
   width: 100%;
   border-bottom: 5px solid #bbb;
   color: #bbb;
   margin-bottom: 50px;
+  display: inline-block;
 }
 
 .bodycontent2 h1 {

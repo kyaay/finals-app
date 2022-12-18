@@ -6,10 +6,12 @@
 }
 .bodycontent h1{
     @include featurefont;
+    display: inline-block;
 }
 .bodycontent2{
-    padding-top: 900px;
+    padding-top: 100px;
    @include features;
+   display: inline-block;
 }
 .bodycontent2 h1{
     @include featurefont;
