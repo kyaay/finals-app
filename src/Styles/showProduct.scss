@@ -1,74 +1,103 @@
 @import './Variables.scss';
 
-.productImg{
-    margin-left: 15%;
-    margin-top: 40%;
-    height: 350px;
+.singleProd {
+    padding: 150px 0;
+}
+.singleProd_container{
+    max-width: 75%;
+    margin: auto;
+}
+.row1{
+    display: flex;
+    flex: wrap;
+}
+.column{
+    width: 40%;
+    padding: 0 15px;
+}
+.productImg img{
+    width: auto;
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: rgba(0, 134, 243, 0.35) 5px 10px 20px;;
+}
+.productDetails h1{
+    color: $textcolor;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.productDetails h2{
+    color: $themecolor;
+    letter-spacing: 0.2em;
+    padding-bottom: 10px;
+}
+.solid{
+    margin: 20px 0 20px 0;
     width: 350px;
-    border-style: groove;
+    border: 2px solid $themecolor;
+    border-radius: 1px;
+}
+.productDetails p{
+    color: #bbb;
 }
 
-.productDetails{
+.productDetails button {
+    color:#3498db;
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size:  20px;
+    font-family: $titlefont;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
+}
+.productDetails button:hover{
+    color:$textcolor;
+}
+
+.productDetails button::before{
+    content: "";
     position: absolute;
-    margin-top: 15%;
-    margin-left: 10%; 
-    width: 350px;
-
-    hr.solid {
-        border-top: 2px solid $defaultcolor;
-        margin-top: 20px;
-      }
-
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+    top:0;
+    border-radius: 0 0 50% 50%;
 }
 
-.checkoutBt{
-    position: absolute; 
+.productDetails button:hover::before{
+    height: 180%;
+}
+.quantity{
+    padding-bottom: 10px;
+}
+.quantity label{
+    color: #bbb;
+}
+.quantity input{
+    background: transparent;
+    height: 30px;
+    width: 40px;
+    border: 2px solid $defaultcolor;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
     text-align: center;
-    margin-top: 11%;
-    margin-left: 12%;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 40%;
-    background-color: $navcolor;
-    border-radius: 10%;
-    box-shadow: rgba(0, 0, 0, 0.35) 5px 10px 20px;
-    h1{
-        color: $themecolor;
-    }
-    button{
-        background-color: $defaultcolor;
-        color: white;
-        width: 200px;
-        padding: 20px;
-        font-size: 20px;
-        border: none;
-        border-radius: 20px;
-    }
-    button:hover{
-        background-color: rgb(86, 202, 86);
-    }
-
-    .quantity label{
-        display: inline-block;
-        margin-right: 10px;
-        margin-bottom: 20%;
-        font-size: 20px;
-        color: white;        
-    }
+    color: $defaultcolor;
+    transition: $transitiontime;
 }
 
-.column {
-    float: left;
-    width: 30%;
+.quantity input:focus{
+    border: 2px solid $themecolor;
+    color: $textcolor;
 }
-  
-  /* Clear floats after the columns */
-.row:after {
-    display: table;
-    clear: both;
-  }
 
-#quantity{
-    width: 30%;
-}
