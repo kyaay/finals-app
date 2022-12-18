@@ -47,16 +47,24 @@ nav{
         color: $themecolor;
     }
 }
-.form {
-    width: 600px;
-    height: 30px;
-    position: relative;
+//.form {
+//    width: 600px;
+//    height: 30px;
+//    position: relative;
+//}
+
+a{
+    transition: .6s;
 }
-.form input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 2px solid $defaultcolor;
+
+
+.inputBox{
+    margin-left: 50px;
+    width: 450px;
+    height: 20px;
+    padding: 7px;
+    border: 1px solid $defaultcolor;
+    background: $navcolor;
     border-radius: 5px;
     outline: none;
     padding: 0 10px;
@@ -65,10 +73,15 @@ nav{
     transition: $transitiontime;
 }
 
-.form input:focus{
-    border: 2px solid $themecolor;
-    color: $textcolor;
+input :focus{
+    border-color: $themecolor;
+    box-shadow: 0 0 8px $themecolor;
 }
+
+//.form input:focus{
+//    border: 2px solid $themecolor;
+//    color: $textcolor;
+// }
 
 
 .logo {

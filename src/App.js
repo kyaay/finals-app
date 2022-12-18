@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import React, { useState, useEffect } from 'react';
 import ProductList from "./ProductList";
+import Login from "./login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ShowProduct from "./showProduct";
 
@@ -29,11 +30,15 @@ const App = () => {
 
   return (
     <Router>
+    <Switch>
+    <Route path="/login">
+    <Login />
+    <Route>
       <div className="App">
         <div>
           <Navbar/>
         </div>
-        <Switch>
+        
           <Route path={"/home"}>
             <div>
               <div className="bodycontent">
