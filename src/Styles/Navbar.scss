@@ -47,11 +47,11 @@ nav{
         color: $themecolor;
     }
 }
-//.form {
-//    width: 600px;
-//    height: 30px;
-//    position: relative;
-//}
+.form {
+   width: 600px;
+   height: 30px;
+   position: relative;
+}
 
 a{
     transition: .6s;
@@ -78,10 +78,10 @@ input :focus{
     box-shadow: 0 0 8px $themecolor;
 }
 
-//.form input:focus{
-//    border: 2px solid $themecolor;
-//    color: $textcolor;
-// }
+.form input:focus{
+   border: 2px solid $themecolor;
+   color: $textcolor;
+}
 
 
 .logo {

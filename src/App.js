@@ -30,31 +30,31 @@ const App = () => {
 
   return (
     <Router>
-    <Switch>
-    <Route path="/login">
-    <Login />
-    <Route>
-      <div className="App">
-        <div>
-          <Navbar/>
-        </div>
-        
-          <Route path={"/home"}>
-            <div>
-              <div className="bodycontent">
-                <h1 className="featured">Featured Products</h1>
-              </div>
+      <Switch>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <div className="App">
+          <div>
+            <Navbar/>
+          </div>
+          
+            <Route path={"/home"}>
               <div>
-                <ProductList products = {products}/>
-                {/* <ShowProduct/> */}
-              </div>     
-            </div>
-          </Route>
-          <Route path={"/buy"}>
-            <ShowProduct />
-          </Route>
-        </Switch>
-      </div>
+                <div className="bodycontent">
+                  <h1 className="featured">Featured Products</h1>
+                </div>
+                <div>
+                  <ProductList products = {products}/>
+                  {/* <ShowProduct/> */}
+                </div>     
+              </div>
+            </Route>
+            <Route path={"/buy"}>
+              <ShowProduct />
+            </Route>
+          </div>
+      </Switch>
       <div>
         <Footer />
       </div>
