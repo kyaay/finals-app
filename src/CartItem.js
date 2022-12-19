@@ -13,7 +13,7 @@ const CartItem = () => {
                             <div>
                                 <img src= {item.thumbnail} alt="image1" />
                                 <label>Price: ${item.price}</label>
-                                <button>-</button>
+                                <button onClick = {}>-</button>
                                 <label>{quantity}</label> 
                                 <button>+</button>
                                 <button>X</button>

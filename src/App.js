@@ -48,6 +48,14 @@ const App = () => {
     setTotalPrice(n);
   }
 
+  function decreaseQuantity() {
+
+  }
+
+  function increaseQuantity() {
+
+  }
+
   function calculateTotalPrice(value){
     
   }
