@@ -4,7 +4,7 @@ const Login = () =>{
 
     return(
         <>
-            <div class="box">
+            <div class="box" data-testid="box">
                 <div class= "form">
                     <h2>Sign in</h2>
                     <div class="Input">
