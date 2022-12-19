@@ -75,4 +75,15 @@ nav {
   font-family: "Rubik 80s Fade", cursive;
   color: rgb(111, 230, 111);
   padding-left: 40px;
+}
+
+.navlinks button {
+  background-color: rgb(35, 35, 35);
+  border: none;
+  color: rgb(100, 100, 100);
+  transition: all 0.3 ease;
+}
+
+.navlinks button:hover {
+  color: rgb(111, 230, 111);
 }/*# sourceMappingURL=Navbar.css.map */

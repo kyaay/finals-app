@@ -77,3 +77,12 @@ nav{
     padding-left: 40px;
 }
 
+.navlinks button {
+    background-color: $navcolor;
+    border: none;
+    color: $defaultcolor;
+    transition: all 0.3 ease;
+}
+.navlinks button:hover{
+    color: $themecolor;
+}
