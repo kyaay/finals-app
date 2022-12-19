@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import React, { useState, useEffect } from 'react';
 import ProductList from "./ProductList";
-// import Login from "./login";
+import Login from "./login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ShowProduct from "./showProduct";
 
@@ -31,30 +31,35 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-      <div>
-        <Navbar/>
-      </div>
       <Switch>
         <Route path={"/home"}>
-            <div className="container">
-                <div className="bodycontent">
-                  <h1 className="featured">Featured Products</h1>
-                </div>
-                <div className="proddiv">
-                  <ProductList products = {products}/>
-                </div>
-                <div className="bodycontent2">
-                  <h1 className="featured">Phones Products</h1>
-                </div>
+          <div className="Home">
+            <Navbar/>
+              <div className="container">
+                  <div className="bodycontent">
+                    <h1 className="featured">Featured Products</h1>
+                  </div>
+                  <div className="proddiv">
+                    <ProductList products = {products}/>
+                  </div>
+                  <div className="bodycontent2">
+                    <h1 className="featured"></h1>
+                  </div>
+              </div>
+            <Footer/>
             </div>
          </Route>
-            <Route path={"/buy"}>
+        <Route path={"/buy"}>
+              <Navbar/>
               <ShowProduct />
-            </Route>
+              <Footer/>
+         </Route>
+         <Route path={"/login"}>
+              <Navbar/>
+              <Login/>
+         </Route>
       </Switch>
-      <div>
-          <Footer/>
-      </div>
+     
     </div>
   </Router>
   );

@@ -3,7 +3,7 @@ import './Styles/login.scss';
 const Login = () =>{
 
     return(
-        <>
+        <div className='body'>
             <div class="box">
                 <div class= "form">
                     <h2>Sign in</h2>
@@ -20,10 +20,12 @@ const Login = () =>{
                     <div class='links'>
                         <a href='#'>Forgot Password?</a>
                     </div>
-                    <input type="submit" value="Login"/>
+                    <div class='login'>
+                        <input type="submit" value="Login"/>
+                    </div>
                 </div>
             </div>
-      </>
+      </div>
     )
 }
 export default Login;

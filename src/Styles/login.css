@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Rubik+80s+Fade&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+.body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,7 +158,7 @@ body {
   color: rgb(111, 230, 111);
 }
 
-input[type=submit] {
+.login input[type=submit] {
   border: none;
   outline: none;
   background-color: rgb(111, 230, 111);
@@ -172,101 +171,12 @@ input[type=submit] {
   transition: all 0.5s ease;
 }
 
-input[type=submit]:hover {
+.login input[type=submit]:hover {
   border: 2px solid rgb(111, 230, 111);
   color: rgb(111, 230, 111);
   background-color: #23242a;
 }
 
-input[type=submit]:active {
+.login input[type=submit]:active {
   opacity: 0.8;
-}
-
-/*
-.logo h1{
-    font-family: $logofont;
-    color: $themecolor;
-    text-align: center;
-}
-
-.login{
-    width: 30%;
-    height: 70%;
-    margin-left: 35%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: none;
-    padding: 20px;
-
-    h1{
-        text-align: center;
-    }
-
-    h2{
-        text-align: center;
-    }
-
-}
-
-
-.form{
-    position: relative;
-    padding-top: 35px;
-
-
-    label{
-       padding: 10px ;
-       margin: 20px;
-       font-size: 15px;
-       font-weight: bold;
-
-    }
-    input{
-        margin-left: 30px;
-        margin-bottom: 20px;
-        width: 80%;
-        background-color: rgb(231, 224, 224);
-        color: black;
-        outline: 0;
-        border-width: 0 0 2px;
-        border-radius: 0;
-    }
-
-    input:hover,
-    input:focus{
-        border-color: $themecolor;
-    }
-
-}
-
-.log-button{
-    padding: 20px;
-
-    button{
-        width: 100%;
-        padding: 15px;
-        font-size: 20px;
-        font-weight: bold;
-        color: black;
-        border-color: $themecolor;
-        background-color: $themecolor;
-    }
-
-    button:hover{
-        background-color: white;
-        border-color: $themecolor;
-    }
-
-
-}
-
-#box{
-    margin-left: 15px;
-    height: 15px;
-    width: 30px;
-}
-
-#forgot{
-    padding-left: 33%;
-    color: black;
-}
-*//*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=login.css.map */
