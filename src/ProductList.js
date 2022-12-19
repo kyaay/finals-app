@@ -6,10 +6,10 @@ const ProductList = ({products}) => {
     return (
         <div className = "product-list" data-testid="product-list">
             {
-                products.map((product,index) => {
+                products?.map((product,index) => {
                     return (
                         <div className = "product" key = {index}>
-                            <div className='overlaycontainer'>
+                            <div className='overlaycontainer' data-testid="overlaycontainer">
                                 <img src = {product.thumbnail} alt = "image1"></img>
                                 <div className='overlay'>
                                     <div className='sampleText'><h3>Product description:</h3><p> ${product.description}</p></div>                                
