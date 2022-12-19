@@ -8,6 +8,7 @@ import ShowProduct from "./showProduct";
 
 //things to install in react
 // npm install sass
+// npm install react-router-dom bootstrap react-bootstrap
 export const CartContext = React.createContext();
 
 const App = () => {
