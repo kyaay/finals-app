@@ -10,9 +10,15 @@ describe("shows the list of products", () => {
         
     });
 
+    it("has a container of the picture", () => {
+        render(<ProductList />);
+        const imgContainer = screen.findByTestId("overlaycontainer");
+        expect(imgContainer).toBeInTheDocument();
+    });
+
     // it("contains the product image", () => {
     //     render(<ProductList />);
-    //     const imgcontainer = screen.getByTestId("overlaycontainer");
+    //     const imgcontainer = screen.getByTestId("overlaycontainer").closest('img').closest('div');
     //     expect(imgcontainer).toBeInTheDocument();
     // });
 
