@@ -79,33 +79,38 @@ const App = () => {
         }}
     >
       <Router>
-        <div className="App">
-          <div>
+      <div className="App">
+      <Switch>
+        <Route path={"/home"}>
+          <div className="Home">
             <Navbar/>
-          </div>
-          <Switch>
-            <Route path={"/home"}>
-                <div className="container">
-                    <div className="bodycontent">
-                      <h1 className="featured">Featured Products</h1>
-                    </div>
-                    <div className="proddiv">
-                      <ProductList products = {products}/>
-                    </div>
-                    <div className="bodycontent2">
-                      <h1 className="featured">Phones Products</h1>
-                    </div>
-                </div>
-            </Route>
-              <Route path={"/buy"}>
-                <ShowProduct />
-              </Route>
-          </Switch>
-          <div>
+              <div className="container">
+                  <div className="bodycontent">
+                    <h1 className="featured">Featured Products</h1>
+                  </div>
+                  <div className="proddiv">
+                    <ProductList products = {products}/>
+                  </div>
+                  <div className="bodycontent2">
+                    <h1 className="featured"></h1>
+                  </div>
+              </div>
+            <Footer/>
+            </div>
+         </Route>
+        <Route path={"/buy"}>
+              <Navbar/>
+              <ShowProduct />
               <Footer/>
-          </div>
-        </div>
-      </Router>
+         </Route>
+         <Route path={"/login"}>
+              <Navbar/>
+              <Login/>
+         </Route>
+      </Switch>
+     
+    </div>
+  </Router>
 
     </CartContext.Provider>
   );
