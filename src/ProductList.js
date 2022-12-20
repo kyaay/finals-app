@@ -8,7 +8,7 @@ const ProductList = ({products}) => {
             {
                 products?.map((product,index) => {
                     return (
-                        <div className = "product" key = {index}>
+                        <div className = "product" key = {index} data-testid="product">
                             <div className='overlaycontainer' data-testid="overlaycontainer">
                                 <img src = {product.thumbnail} alt = "image1"></img>
                                 <div className='overlay'>
