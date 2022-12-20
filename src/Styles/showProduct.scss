@@ -19,7 +19,7 @@
     padding: 0 15px;
 }
 .productImg img{
-    width: auto;
+    width: 500px;
     border-radius: 10px;
     object-fit: contain;
     box-shadow: rgba(0, 134, 243, 0.35) 5px 10px 20px;;
@@ -89,7 +89,7 @@
 .quantity input{
     background: transparent;
     height: 30px;
-    width: 40px;
+    width: 50px;
     border: 2px solid $defaultcolor;
     border-radius: 5px;
     outline: none;

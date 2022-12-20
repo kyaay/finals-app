@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import React, { useState, useEffect } from 'react';
 import ProductList from "./ProductList";
+import products from "./products.json";
 import Login from "./login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ShowProduct from "./showProduct";
@@ -12,7 +13,7 @@ import ShowProduct from "./showProduct";
 export const CartContext = React.createContext();
 
 const App = () => {
-  const [products,setProducts] = useState([]);
+  const [productss,setProducts] = useState([]);
   const [cartList, setCartList] = useState([]);
   const [isCartActive, setIsCartActive] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);

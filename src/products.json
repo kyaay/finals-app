@@ -45,7 +45,7 @@
         "stock":96,
         "brand":"Infinix",
         "category":"laptops",
-        "thumbnail":"https://i.dummyjson.com/data/products/9/thumbnail.jpg"
+        "thumbnail":"https://unbox.ph/wp-content/uploads/2021/10/Infinix-INBook-X1-2.jpg"
     },
     {
         "id":5,
@@ -61,7 +61,7 @@
     },
     {
         "id":6,
-        "title":"Predator Helios 300 PH315-52-54KC",
+        "title":"Predator Helios 300 ",
         "description":"Predator Helios 300 PH315-52-54KC Gaming Laptop Intel® Core™ i5-9300H, 4 GB of DDR4, 256GB NVMe SSD, GTX 1650 4GB, Windows 10",
         "price":1049.00,
         "discountPercentage":7.18,
@@ -69,11 +69,11 @@
         "stock":43,
         "brand":"Acer",
         "category":"laptops",
-        "thumbnail":"https://www.notebookcheck.net/fileadmin/Notebooks/HP/Pavilion_Gaming_15-ec1206ng/4zu3_HP_Pavilion_Gaming_15_ec.jpg"
+        "thumbnail":"https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71os19334GL._AC_SX679_.jpg"
     },
     {
         "id":7,
-        "title":"Predator Helios 300 PH315-52-54KC",
+        "title":"Predator Triton 500 SE",
         "description":"Acer Predator Triton 500 PT515-52-742J Gaming Laptop, Intel i7-10875H, NVIDIA GeForce RTX 2080 Super, RGB Backlit KB",
         "price":3399.00,
         "discountPercentage":9.15,

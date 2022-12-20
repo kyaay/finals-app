@@ -24,7 +24,7 @@
 }
 
 .productImg img {
-  width: auto;
+  width: 500px;
   border-radius: 10px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -103,7 +103,7 @@
 .quantity input {
   background: transparent;
   height: 30px;
-  width: 40px;
+  width: 50px;
   border: 2px solid rgb(100, 100, 100);
   border-radius: 5px;
   outline: none;

@@ -33,6 +33,7 @@
 
 .product {
   width: 400px;
+  height: 400px;
   padding: 20px;
   background: #1c1c1c;
   box-shadow: rgba(30, 80, 49, 0.35) 5px 10px 20px;
@@ -58,10 +59,11 @@
   height: 200px;
   -o-object-fit: contain;
      object-fit: contain;
+  background-color: #fff;
 }
 
 .container {
-  padding-left: 50px;
+  padding-left: 40px;
   padding-right: 50px;
 }
 

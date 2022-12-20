@@ -8,7 +8,7 @@ const ShowProduct = () =>{
                 <div className="row1">
                     <div className="column">
                         <div className="productImg">
-                            <img src="https://i.dummyjson.com/data/products/6/thumbnail.png"></img>
+                            <img src="https://www.apple.com/v/macbook-pro-14-and-16/b/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png"></img>
                         </div>
                     </div>
                     <div className="column">

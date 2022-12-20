@@ -12,14 +12,14 @@ const ProductList = ({products}) => {
                             <div className='overlaycontainer'>
                                 <img src = {product.thumbnail} alt = "image1"></img>
                                 <div className='overlay'>
-                                    <div className='sampleText'><h3>Product description:</h3><p> ${product.description}</p></div>                                
+                                    <div className='sampleText'><h3>Product description:</h3><p> {product.description}</p></div>                                
                                 </div>
                             </div>
                             <div className='prodtitle'>
                                 <h3>{product.title} </h3>
                             </div>
                             <div className='price'>
-                                <label>Price: ${product.price} </label>
+                                <label>Price: ${product.price}.00 </label>
                             </div>
                             <div className='prodbutton'>
                                 <button className="btn Add">Add to Cart</button>
