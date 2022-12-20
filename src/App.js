@@ -8,9 +8,15 @@ import ShowProduct from "./showProduct";
 
 //things to install in react
 // npm install sass
+// npm install react-router-dom bootstrap react-bootstrap
+export const CartContext = React.createContext();
 
 const App = () => {
   const [products,setProducts] = useState([]);
+  const [cartList, setCartList] = useState([]);
+  const [isCartActive, setIsCartActive] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [quantity, setQuantity] = useState(0);
 
 
   const getproductRequest = async () => {
@@ -23,45 +29,85 @@ const App = () => {
     })
   }
 
+  function addToCart(value){
+    cartList.push(value);
+    console.log(value.title);
+  }
+
+  function activeCart(){
+    setIsCartActive(!isCartActive);
+    let n = 0;
+    cartList.map((item,index) => {
+      return (
+          <>
+              {
+                  n = n + Number(item.price)
+              }
+          </>
+      )
+    })
+    setTotalPrice(n);
+  }
+
+  function decreaseQuantity() {
+
+  }
+
+  function increaseQuantity() {
+
+  }
+
+  function calculateTotalPrice(value){
+    
+  }
+
   useEffect(() => {
     getproductRequest();
   }, []);
 
-
   return (
-    <Router>
-      <div className="App">
-      <Switch>
-        <Route path={"/home"}>
-          <div className="Home">
+    <CartContext.Provider value = {
+        {
+          quantity: quantity,
+          calculate: calculateTotalPrice,
+          totalPrice: totalPrice, 
+          cartList: cartList, 
+          isCartActive: isCartActive, 
+          activeCart: activeCart,
+          products: products, 
+          addToCart: addToCart
+        }}
+    >
+      <Router>
+        <div className="App">
+          <div>
             <Navbar/>
-              <div className="container">
-                  <div className="bodycontent">
-                    <h1 className="featured">Featured Products</h1>
-                  </div>
-                  <div className="proddiv">
-                    <ProductList products = {products}/>
-                  </div>
-                  <div className="bodycontent2">
-                    <h1 className="featured"></h1>
-                  </div>
-              </div>
-            <Footer/>
-            </div>
-         </Route>
-        <Route path={"/buy"}>
-              <Navbar/>
-              <ShowProduct />
+          </div>
+          <Switch>
+            <Route path={"/home"}>
+                <div className="container">
+                    <div className="bodycontent">
+                      <h1 className="featured">Featured Products</h1>
+                    </div>
+                    <div className="proddiv">
+                      <ProductList products = {products}/>
+                    </div>
+                    <div className="bodycontent2">
+                      <h1 className="featured">Phones Products</h1>
+                    </div>
+                </div>
+            </Route>
+              <Route path={"/buy"}>
+                <ShowProduct />
+              </Route>
+          </Switch>
+          <div>
               <Footer/>
-         </Route>
-         <Route path={"/login"}>
-              <Navbar/>
-              <Login/>
-         </Route>
-      </Switch>
-     
-    </div>
-  </Router>
+          </div>
+        </div>
+      </Router>
+
+    </CartContext.Provider>
   );
 }
 

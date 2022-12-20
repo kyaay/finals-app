@@ -1,8 +1,11 @@
 import React from 'react';
+import { CartContext } from './App'
+import Cart from './Cart'
 import './Styles/Navbar.scss';
 
 
 function Navbar(){
+    const {activeCart} = React.useContext(CartContext);
     return(
     <div>    
         <header>
@@ -14,9 +17,10 @@ function Navbar(){
             </div>
             <nav>
                 <ul className='navlinks'>
-                    <li><a href='home'><i class="fa fa-home fa-2x"></i></a></li>
-                    <li><a href='login'><i class="fa fa-user-circle fa-2x"></i></a></li>
-                    <li><a href='cart'><i class="fa fa-shopping-cart fa-2x"></i></a></li>
+                    <li><a href='home'><i className="fa fa-home fa-2x"></i></a></li>
+                    <li><a href='contact-us'><i className="fa fa-address-book fa-2x"></i></a></li>
+                    <li><a href='profile'><i className="fa fa-user-circle fa-2x"></i></a></li>
+                    <li><button onClick = {activeCart}><a><i className="fa fa-shopping-cart fa-2x"></i></a><Cart /></button></li>
                 </ul>
             </nav>
         </header>
