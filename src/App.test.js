@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { waitFor, render, screen } from '@testing-library/react';
 import Navbar from './Navbar';
 import ProductList from './ProductList';
 
@@ -51,26 +51,28 @@ describe("shows the list of products", () => {
         render(<ProductList />);
         const container = screen.getByTestId("product-list");
         expect(container).toBeInTheDocument();
-
-        
     });
-
-    // it("has a container of the picture", () => {
-    //     render(<ProductList />);
-    //     // const product = screen.queryByTestId("product")
-    //     const imgContainer = screen.queryByTestId("overlaycontainer");
-    //     expect(imgContainer).toBeInTheDocument();
-    // });
-
-    // it("contains the product image", () => {
-    //     render(<ProductList />);
-    //     const imgcontainer = screen.queryby("overlaycontainer").closest('img').closest('div');
-    //     expect(imgcontainer).toBeInTheDocument();
-    // });
 
     it("contains picture of the product", () => {
         render(<ProductList />);
         const displayPic = screen.queryByAltText("image1");
-        expect(displayPic).toBeInTheDocument();
+        waitFor(() => expect(displayPic).toBeTruthy());
+    });
+
+    it("contains the product title", () => {
+        render(<ProductList />);
+        const title = screen.queryByTestId("prodtitle");
+        waitFor(() => expect(title).toBeInTheDocument());
+    });
+
+    it("contains the price", () => {
+        render(<ProductList />);
+        const price = screen.queryByTestId("price");
+        waitFor(() => expect(price).toBeInTheDocument());
+    });
+    it("contains a button", () => {
+        render(<ProductList />);
+        const button = screen.queryByTestId("prodbutton");
+        waitFor(() => expect(button).toBeInTheDocument());
     })
 });

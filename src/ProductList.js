@@ -15,13 +15,13 @@ const ProductList = ({products}) => {
                                     <div className='sampleText'><h3>Product description:</h3><p> ${product.description}</p></div>                                
                                 </div>
                             </div>
-                            <div className='prodtitle'>
+                            <div className='prodtitle' data-testid="prodtitle">
                                 <h3>{product.title} </h3>
                             </div>
-                            <div className='price'>
+                            <div className='price' data-testid="price">
                                 <label>Price: ${product.price} </label>
                             </div>
-                            <div className='prodbutton'>
+                            <div className='prodbutton' data-testid="prodbutton">
                                 <button className="btn Add">Add to Cart</button>
                                 <a className="btn Buy" onClick={() => {history.push('/buy')}}>Buy Now</a>
                             </div>
