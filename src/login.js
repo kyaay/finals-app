@@ -4,20 +4,20 @@ const Login = () =>{
 
     return(
         <>
-            <div class="box" data-testid="box">
-                <div class= "form">
+            <div className="box" data-testid="box">
+                <div className= "form">
                     <h2>Sign in</h2>
-                    <div class="Input">
+                    <div className="Input">
                         <input type="text" required="required"/>
                         <span>Username</span>
                         <i></i>
                     </div>
-                    <div class="Input">
+                    <div className="Input">
                         <input type="password" required="required"/>
                         <span>Password</span>
                         <i></i>
                     </div>
-                    <div class='links'>
+                    <div className='links'>
                         <a href='#'>Forgot Password?</a>
                     </div>
                     <input type="submit" value="Login"/>
