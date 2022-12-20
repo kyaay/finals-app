@@ -10,7 +10,7 @@ const ProductList = ({products}) => {
                     return (
                         <div className = "product" key = {index} data-testid="product">
                             <div className='overlaycontainer' data-testid="overlaycontainer">
-                                <img src = {product.thumbnail} alt = "image1"></img>
+                                <img src = {product.thumbnail} alt = "image1" data-testid="image1"></img>
                                 <div className='overlay'>
                                     <div className='sampleText'><h3>Product description:</h3><p> ${product.description}</p></div>                                
                                 </div>
