@@ -15,7 +15,6 @@ function Navbar(){
             <nav>
                 <ul className='navlinks'>
                     <li><a href='home'><i class="fa fa-home fa-2x"></i></a></li>
-                    <li><a href='contact-us'><i class="fa fa-address-book fa-2x"></i></a></li>
                     <li><a href='login'><i class="fa fa-user-circle fa-2x"></i></a></li>
                     <li><a href='cart'><i class="fa fa-shopping-cart fa-2x"></i></a></li>
                 </ul>
