@@ -1,7 +1,10 @@
 import { useHistory } from 'react-router';
+import React from 'react'
+import { CartContext } from './App';
 import './Styles/ProductList.scss';
 
 const ProductList = ({products}) => {
+    const {addToCart} = React.useContext(CartContext);
     let history = useHistory();
     return (
         <div className = "product-list" data-testid="product-list">
@@ -22,11 +25,9 @@ const ProductList = ({products}) => {
                                 <label>Price: ${product.price}.00 </label>
                             </div>
                             <div className='prodbutton'>
-                                <button className="btn Add">Add to Cart</button>
+                                <button className="btn Add" onClick = {() => addToCart(product)}>Add to Cart</button>
                                 <a className="btn Buy" onClick={() => {history.push('/buy')}}>Buy Now</a>
                             </div>
-        
-                          
                         </div>)
                     }
                 )
