@@ -1,108 +1,66 @@
 import { waitFor, render, screen } from '@testing-library/react';
-import { CartContext, activeCart } from './App';
+import React from 'react';
+import { CartContext } from './App';
 import Navbar from './Navbar';
 // import ProductList from './ProductList';
 // import Login from './login';
-// import Cart from './Cart';
+import Cart from './Cart';
 // import CartItem from './CartItem';
 // import { useContext } from 'react';
-// // import axios from "axios";
 
-// // jest.mock("axios");
-
-// // const mockToken = "QpwL5tke4Pnpja7X4";
-
-// // const validUser = {
-// //   'email': 'eve.holt@reqres.in',
-// //   'password': 'cityslicka'
-// // }
-
-describe("Check if there is a nav bar", () => {
-    it("checks the cart button", () => {
-      const CartComponent = () => {
-        const { activeCart } = React.useContext(CartContext)
+describe("Nav bar", () => {
+    it("checks the cart button and search bar in navbar", () => {
+      const NavbarComponent = () => {
+        const { activeCart, handleUserSearch} = React.useContext(CartContext)
 
         return <>
-            <div>{activeCart}</div>.
+            <div>{activeCart}</div>
+            <input type="inputBox" placeholder='Search' autoFocus data-testid="inputBox" onChange = {handleUserSearch}/>
         </>
       }
-         // const displaylogo = document.createElement('img');
-
-
-      // if logo is an image
-      // const displayLogo = document.querySelector("img");
-      // expect(displayLogo.src).toContain("logo");
     });
-
-    //this test cannot search yet, only input
-    // it("has a search bar", () => {
-    //   render(<Navbar />);
-    //   const search = screen.getByTestId("inputBox");
-    //   expect(search).toBeInTheDocument();
-    // });
-
-    // it("has a home button", () => {
-    //   render(<Navbar />);
-    //   const home = screen.getByTestId('home').closest('i').closest('a');
-    //   expect(home).toBeInTheDocument();
-    // });
-
-    // it("has an add to card", () => {
-    //   render(<Navbar />);
-    //   const cart = screen.getByTestId('cart').closest('i').closest('a');
-    //   expect(cart).toBeInTheDocument();
-    // });
-
 }); 
 
-// // describe("shows the list of products", () => {
-// //     it("container of all the products", () => {
-// //         render(<ProductList />);
-// //         const container = screen.getByTestId("product-list");
-// //         expect(container).toBeInTheDocument();
-// //     });
+describe("Cart Item", () => {
+    it("has a cart list", () => {
+        const CartComponent = () => {
+            const {removeFromCart, decreaseQuantity, increaseQuantity} = React.useContext(CartContext);
 
-//     // it("contains picture of the product", () => {
-//     //     render(<ProductList />);
-//     //     const displayPic = screen.queryByAltText("image1");
-//     //     waitFor(() => expect(displayPic).toBeTruthy());
-//     // });
+            return <>
+                <button className='xbutton' onClick = {() => removeFromCart(item)}>✕</button>
+                <button className='btns IncDec' onClick = {() => increaseQuantity(item)}>INCREASE</button>
+                                    <button className='btns IncDec' onClick = {() => decreaseQuantity(item)}>DECREASE</button>
+            </>
+        }
+    });
+});
 
-//     // it("contains the product title", () => {
-//     //     render(<ProductList />);
-//     //     const title = screen.queryByTestId("prodtitle");
-//     //     waitFor(() => expect(title).toBeInTheDocument());
-//     // });
+describe("Add to cart", () => {
+    it("adds to cart", () => {
+        const ProductComponent = () => {
+            const { addToCart } = React.useContext(CartContext);
 
-//     // it("contains the price", () => {
-//     //     render(<ProductList />);
-//     //     const price = screen.queryByTestId("price");
-//     //     waitFor(() => expect(price).toBeInTheDocument());
-//     // });
-//     // it("contains a button", () => {
-//     //     render(<ProductList />);
-//     //     const button = screen.queryByTestId("prodbutton");
-//     //     waitFor(() => expect(button).toBeInTheDocument());
-//     // })
-// //});
+            return <>
+                <button className="btn Add" onClick = {() => addToCart(product)}>Add to Cart</button>
+            </>
+        }
+    });
+});
 
-// // describe("Login Page", () => {
-// //     it("has an input for email", () => {
-// //         render(<Login />);
-// //         const email = screen.getByTestId("email");
-// //         expect(email).toBeInTheDocument();
-// //     });
-// //     it("has an input for password", () => {
-// //         render(<Login />);
-// //         const password = screen.getByTestId("password");
-// //         expect(password).toBeInTheDocument();
-// //     });
-// //     it("has a submit button", () => {
-// //         render(<Login />);
-// //         const btn = screen.getByTestId("sbutton");
-// //         expect(btn).toBeInTheDocument();
-// //     });
-// // });
+describe("shows the cart list, total price", () => {
+    it("cart list, total price", () => {
+        const CartlistComponent = () => {
+            const { totalPrice } = React.useContext(CartContext);
+
+            return <>
+                <label className="totalprice">Total Price: ${totalPrice}.00 </label>
+            </>
+            
+        }
+    });
+});
+
+
 
 // describe("shows the cart", () => {
 //     it("check out", () => {
@@ -134,11 +92,11 @@ describe("Check if there is a nav bar", () => {
 //         expect(btn).toBeInTheDocument();
 //     });
 // });
-// // describe("Checks if the user is valid", () => {
-// //     it("returns a token", async () => {
-// //         axios.post.mockResolvedValue(mockToken);
-// //     })
-// //     it("user is valid", async () => {
-// //         axios.post.mockResolvedValueOnce(validUser);
-// //     })
-// // });
+// describe("Checks if the user is valid", () => {
+//     it("returns a token", async () => {
+//         axios.post.mockResolvedValue(mockToken);
+//     })
+//     it("user is valid", async () => {
+//         axios.post.mockResolvedValueOnce(validUser);
+//     })
+// });
