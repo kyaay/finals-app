@@ -1,6 +1,7 @@
 import React from 'react';
 import { CartContext } from './App'
 import Cart from './Cart'
+import Login from './Login'
 import './Styles/Navbar.scss';
 
 

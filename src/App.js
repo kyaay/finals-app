@@ -1,9 +1,9 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Login from "./Login"
 import React, { useState, useEffect } from 'react';
 import ProductList from "./ProductList";
 import Data from "./products.json";
-import Login from "./login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ShowProduct from "./showProduct";
 import Cart from './Cart'
@@ -18,25 +18,21 @@ const App = () => {
   const [cartList, setCartList] = useState([]);
   const [isCartActive, setIsCartActive] = useState(true);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [loginStatus, setLoginStatus] = useState(false);
 
   const activeCart = () => setIsCartActive(!isCartActive);
 
   const getproductRequest = async () => {
     setProducts(Data);
-    // const url = 'https://dummyjson.com/products/category/laptops';
-    
-    // await fetch (url)
-    // .then(response => response.json())
-    // .then(response => {
-    //   setProducts(response.products)
-    // })
   }
 
-  function addToCart(value){
-    const newList = [...cartList];
-    newList.push(value);
-    setCartList(newList);
-    localStorage.setItem('listItems', JSON.stringify(cartList));
+  function addToCart(selected){
+    if(cartList.indexOf(selected) === -1){
+      const newList = [...cartList];
+      newList.push(selected);
+      setCartList(newList);
+      localStorage.setItem('listItems', JSON.stringify(newList));
+    }
   }
 
   function removeFromCart(selected) {
@@ -48,9 +44,12 @@ const App = () => {
   function decreaseQuantity(selected){
     const productList = [...cartList];
     const index = productList.indexOf(selected);
-    productList[index].quantity--;
-    setCartList(productList);
-    localStorage.setItem("cart", JSON.stringify(productList));
+    if(productList[index].quantity - 1 > 0){
+      productList[index].quantity--;
+      setCartList(productList);
+      localStorage.setItem("cart", JSON.stringify(productList));
+    }
+    removeFromCart(selected);
   }
 
   function increaseQuantity(selected){
@@ -67,12 +66,13 @@ const App = () => {
     if(storedItems){
       setCartList(storedItems);
     }
-
   }, []);
 
   return (
     <CartContext.Provider value = {
         {
+          loginStatus: loginStatus,
+          setLoginStatus: setLoginStatus,
           totalPrice: totalPrice, 
           cartList: cartList, 
           isCartActive: isCartActive, 
@@ -121,7 +121,6 @@ const App = () => {
         </Switch>
       </div>
     </Router>
-    <Cart />
     </CartContext.Provider>
   );
 }
