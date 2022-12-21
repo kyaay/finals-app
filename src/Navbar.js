@@ -5,7 +5,7 @@ import './Styles/Navbar.scss';
 
 
 function Navbar(){
-    const {search, handleUserSearch, activeCart} = React.useContext(CartContext);
+    const {onTextChange, activeCart} = React.useContext(CartContext);
 
     return(
     <div className='navbar'>    
@@ -14,7 +14,7 @@ function Navbar(){
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <h1 className='logo' data-testid="logo">TECHNO</h1>
             <div className='forms'>
-                <input type="inputBox" placeholder='Search' autoFocus data-testid="inputBox" onChange = {handleUserSearch}/>
+                <input type="inputBox" placeholder='Search' autoFocus data-testid="inputBox" onChange = {onTextChange}/>
             </div>
             <nav>
                 <ul className='navlinks'>

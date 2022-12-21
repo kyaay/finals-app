@@ -1,12 +1,11 @@
-import { useHistory } from 'react-router';
 import React from 'react'
 import { CartContext } from './App';
 import './Styles/ProductList.scss';
 
 const ProductList = () => {
-    const {searchList, products, addToCart, searchValue} = React.useContext(CartContext);
+    const {handleUserSearch, products, addToCart, searchValue, removeFromCart, increaseQuantity, decreaseQuantity} = React.useContext(CartContext);
 
-    return (searchList.length === 0) ? (
+    return (searchValue === '') ? (
         <div className = "product-list" data-testid="product-list">
             {
                 products?.map((product,index) => {
@@ -35,28 +34,34 @@ const ProductList = () => {
     ) : (
         <div className = "search-list">
             {
-                searchList.map((product, index) => {
-                    return (
-                        <div className = "product" key = {index}>
-                            <div className='overlaycontainer'>
-                                <img src = {product.thumbnail} alt = "image1"></img>
-                                <div className='overlay'>
-                                    <div className='sampleText'><h3>Product description:</h3><p> {product.description}</p></div>                                
+                products.filter(items => {
+                    const value = searchValue.toLowerCase();
+                    const title = items.title.toLowerCase();
+                    return value && title.startsWith(value);
+                }).map((product , index) => {
+                        return (
+                            <>
+                                <div className = "product" key = {index}>
+                                    <div className='overlaycontainer'>
+                                        <img src = {product.thumbnail} alt = "image1"></img>
+                                        <div className='overlay'>
+                                            <div className='sampleText'><h3>Product description:</h3><p> {product.description}</p></div>                                
+                                        </div>
+                                    </div>
+                                        <div className='prodtitle'>
+                                            <h3 data-testid="prodtitle">{product.title} </h3>
+                                        </div>
+                                        <div className='price'>
+                                            <label data-testid="price">Price: ${product.price}.00 </label>
+                                        </div>
+                                    <div className='prodbutton'>
+                                        <button className="btn Add" onClick = {() => addToCart(product)}>Add to Cart</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='prodtitle'>
-                                <h3 data-testid="prodtitle">{product.title} </h3>
-                            </div>
-                            <div className='price'>
-                                <label data-testid="price">Price: ${product.price}.00 </label>
-                            </div>
-                            <div className='prodbutton'>
-                                <button className="btn Add" onClick = {() => addToCart(product)}>Add to Cart</button>
-                            </div>
-                        </div>
-                    )
-                })
-            }
+                            </>
+                        )
+                        })
+                    }
         </div>
     )
     /* 
