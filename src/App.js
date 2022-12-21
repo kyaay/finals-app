@@ -16,10 +16,10 @@ export const CartContext = React.createContext();
 const App = () => {
   const [products,setProducts] = useState([]);
   const [cartList, setCartList] = useState([]);
-  const [isCartActive, setIsCartActive] = useState(false);
+  const [isCartActive, setIsCartActive] = useState(true);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [quantity, setQuantity] = useState(0);
 
+  const activeCart = () => setIsCartActive(!isCartActive);
 
   const getproductRequest = async () => {
     setProducts(Data);
@@ -37,21 +37,6 @@ const App = () => {
     console.log(cartList);
     setCartList(cartList);
     localStorage.setItem('listItems', JSON.stringify(cartList));
-  }
-
-  function activeCart(){
-    setIsCartActive(!isCartActive);
-    let n = 0;
-    cartList.map((item,index) => {
-      return (
-          <>
-              {
-                  n = n + Number(item.price)
-              }
-          </>
-      )
-    })
-    setTotalPrice(n);
   }
 
   function removeFromCart(selected) {
@@ -88,7 +73,6 @@ const App = () => {
   return (
     <CartContext.Provider value = {
         {
-          quantity: quantity,
           totalPrice: totalPrice, 
           cartList: cartList, 
           isCartActive: isCartActive, 
@@ -137,7 +121,7 @@ const App = () => {
         </Switch>
       </div>
     </Router>
-
+    <Cart />
     </CartContext.Provider>
   );
 }

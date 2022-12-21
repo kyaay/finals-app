@@ -5,7 +5,7 @@ import './Styles/Navbar.scss';
 
 
 function Navbar(){
-    // const {activeCart} = React.useContext(CartContext);
+    const {activeCart} = React.useContext(CartContext);
     return(
     <div>    
         <header>
@@ -20,10 +20,11 @@ function Navbar(){
                     <li><a href='home'><i className="fa fa-home fa-2x" data-testid="home"></i></a></li>
                     <li><a href='contact-us'><i className="fa fa-address-book fa-2x" data-testid="contact"></i></a></li>
                     <li><a href='login'><i className="fa fa-user-circle fa-2x" data-testid="login"></i></a></li>
-                    <li><a href ='cart'><i className="fa fa-shopping-cart fa-2x"></i></a></li>
+                    <li><button onClick = {activeCart}><i className="fa fa-shopping-cart fa-2x"></i></button></li>
                 </ul>
             </nav>
         </header>
+        <Cart />
      </div>
     )
 }
