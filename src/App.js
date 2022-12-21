@@ -33,9 +33,9 @@ const App = () => {
   }
 
   function addToCart(value){
-    cartList.push(value);
-    console.log(cartList);
-    setCartList(cartList);
+    const newList = [...cartList];
+    newList.push(value);
+    setCartList(newList);
     localStorage.setItem('listItems', JSON.stringify(cartList));
   }
 
