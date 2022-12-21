@@ -67,6 +67,15 @@ const App = () => {
     localStorage.setItem("cart", JSON.stringify(productList));
   }
 
+  const onTextChange = (event) => {
+    const value = event.target.value;
+    setSearchValue(value);
+  }
+
+  const handleUserSearch = (searchTerm) => {
+    console.log(searchTerm);
+  }
+
   useEffect(() => {
     getproductRequest();
     let storedItems = JSON.parse(localStorage.getItem('listItems'));
@@ -78,6 +87,7 @@ const App = () => {
   return (
     <CartContext.Provider value = {
         {
+          onTextChange: onTextChange,
           searchList: searchList,
           loginStatus: loginStatus,
           setLoginStatus: setLoginStatus,
@@ -92,6 +102,7 @@ const App = () => {
           increaseQuantity: increaseQuantity,
           setTotalPrice: setTotalPrice,
           searchValue: searchValue,
+          handleUserSearch: handleUserSearch
         }}
     >
       <Router>
