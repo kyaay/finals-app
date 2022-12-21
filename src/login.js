@@ -7,12 +7,12 @@ const Login = () =>{
             <div className="box" data-testid="box">
                 <div className= "form">
                     <h2>Sign in</h2>
-                    <div className="Input">
+                    <div className="Input" data-testid="email">
                         <input type="text" required="required"/>
                         <span>Username</span>
                         <i></i>
                     </div>
-                    <div className="Input">
+                    <div className="Input" data-testid="password">
                         <input type="password" required="required"/>
                         <span>Password</span>
                         <i></i>

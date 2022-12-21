@@ -1,6 +1,16 @@
 import { waitFor, render, screen } from '@testing-library/react';
 import Navbar from './Navbar';
 import ProductList from './ProductList';
+import Login from './login';
+
+// jest.mock("axios");
+
+// const mockToken = "QpwL5tke4Pnpja7X4";
+
+// const validUser = {
+//   'email': 'eve.holt@reqres.in',
+//   'password': 'cityslicka'
+// }
 
 describe("Check if there is a nav bar", () => {
     it("has a logo", () => {
@@ -75,4 +85,22 @@ describe("shows the list of products", () => {
         const button = screen.queryByTestId("prodbutton");
         waitFor(() => expect(button).toBeInTheDocument());
     })
+});
+
+describe("Login Page", () => {
+    it("has an input for email", () => {
+        render(<Login />);
+        const email = screen.getByTestId("email");
+        expect(email).toBeInTheDocument();
+    });
+    it("has an input for password", () => {
+        render(<Login />);
+        const password = screen.getByTestId("password");
+        expect(password).toBeInTheDocument();
+    });
+    it("has a submit button", () => {
+        render(<Login />);
+        const email = screen.getByTestId("email");
+        expect(email).toBeInTheDocument();
+    });
 });
