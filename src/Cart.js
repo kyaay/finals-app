@@ -29,7 +29,7 @@ function Cart(){
                     <div className = "cart">
                         <div className="cartcontainer">
                             {
-                                (cartList.length > 0) ? <div className="cart-list"> <CartItem /> </div>: <label>No items in cart.</label>
+                                (cartList.length > 0) ? <div className="cart-list"> <CartItem /> </div>: <div className="noitems_container"><label className="noitems">No Items Found!</label></div> 
                             }
                         </div>
                         <div className="cartbarfooter">
@@ -37,11 +37,13 @@ function Cart(){
                         </div>
                         <div className = "cart-total-price">
                             {
-                                (cartList.length > 0) ? <label className="totalprice">Total Price: {totalPrice} </label> : <label></label>
+                                (cartList.length > 0) ? <label className="totalprice">Total Price: ${totalPrice}.00 </label> : <label></label>
                             }
                         </div>
                     </div>
-                    <button>Check Out</button>
+                    <div className='prodbutton'>
+                        <button className="btn Add">Check Out</button>
+                    </div>
                 </div>
             </div>
         </>

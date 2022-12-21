@@ -21,8 +21,8 @@ const CartItem = () => {
                                     <label data-testid="price">Price: ${item.price}.00 </label>
                                 </div>
                                 <div className = 'quantity'>
-                                    <label>{item.quantity}x</label><br></br>
-                                    <label>{item.quantity * item.price}</label>
+                                    <h3 className='amount'>Quantity: {item.quantity}</h3>
+                                    <p className='subtotal'>Subtotal: ${item.quantity * item.price}.00</p>
                                 </div>
                                 <div className='cartbuttons'>
                                     <button className='btns IncDec' onClick = {() => increaseQuantity(item)}>INCREASE</button>

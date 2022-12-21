@@ -80,10 +80,15 @@ nav{
 }
 
 .navlinks button {
+    height: 50px;
+    width: 50px;
     background-color: $navcolor;
-    border: none;
     color: $defaultcolor;
-    transition: all 0.3 ease;
+    border: 2px solid #3498db;
+    cursor: pointer;
+    position: fixed;
+    border-radius: 5px;
+    margin-left: -10px;
 }
 .navlinks button:hover{
     color: $themecolor;

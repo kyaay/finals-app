@@ -6,7 +6,7 @@
     position: fixed;
     width: 30%;
     height: 90%;
-    background: $backgroundcolor;
+    background: $navcolor;
     right: -100%;
     transition: all 300ms linear;
     padding-top: 20px;
@@ -31,6 +31,30 @@
     width: 500px;
     overflow: hidden;
     overflow-y: scroll;
+    padding-top: 10px;
+    border: 2px solid $defaultcolor;
+    border-radius: 5px;
+    background-color: $backgroundcolor;
+}
+.noitems_container{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.noitems {
+    color: $themecolor;
+    text-transform: capitalize;
+    font-size: 20px; 
+    letter-spacing: 0.4em;
+}
+
+.noitems{
+    align-items: center;
+    justify-content: center;
 }
 .sidebar-content {
     position: relative;
@@ -45,7 +69,7 @@
 
 .productcart {
     width: 400px;
-    height: 450px;
+    height: 490px;
     padding: 0px 20px 20px 20px;
     background: #1c1c1c;
     box-shadow: rgba(30, 80, 49, 0.35) 5px 10px 20px;;
@@ -120,8 +144,25 @@
 .cart-total-price{
     width: 100%;
     margin-top: -40px;
+    text-align: center;
 }
 .cart-total-price label{
     color: $themecolor;
     font-size: 25px;
+}
+.quantity{
+    width: 100%;
+    border-top: 3px solid $textcolor;
+    text-align: center;
+    padding-top: 10px;
+}
+.quantity h3{
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color:$textcolor;
+}
+.quantity p{
+    color:$themecolor;
+    font-weight: 500;
+    letter-spacing: 0.05em;
 }
