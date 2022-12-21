@@ -6,7 +6,7 @@ const ProductList = ({products}) => {
     return (
         <div className = "product-list" data-testid="product-list">
             {
-                products.map((product,index) => {
+                products?.map((product,index) => {
                     return (
                         <div className = "product" key = {index}>
                             <div className='overlaycontainer'>
@@ -16,14 +16,14 @@ const ProductList = ({products}) => {
                                 </div>
                             </div>
                             <div className='prodtitle'>
-                                <h3>{product.title} </h3>
+                                <h3 data-testid="prodtitle">{product.title} </h3>
                             </div>
                             <div className='price'>
-                                <label>Price: ${product.price}.00 </label>
+                                <label data-testid="price">Price: ${product.price}.00 </label>
                             </div>
                             <div className='prodbutton'>
                                 <button className="btn Add">Add to Cart</button>
-                                <a className="btn Buy" onClick={() => {history.push('/buy')}}>Buy Now</a>
+                                <a data-testid="prodbutton" className="btn Buy" onClick={() => {history.push('/buy')}}>Buy Now</a>
                             </div>
         
                           

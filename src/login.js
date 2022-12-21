@@ -8,12 +8,12 @@ const Login = () =>{
                 <div class= "form">
                     <h2>Sign in</h2>
                     <div class="Input">
-                        <input type="text" required="required"/>
+                        <input data-testid="email" type="text" required="required"/>
                         <span>Username</span>
                         <i></i>
                     </div>
                     <div class="Input">
-                        <input type="password" required="required"/>
+                        <input data-testid="password" type="password" required="required"/>
                         <span>Password</span>
                         <i></i>
                     </div>
@@ -21,7 +21,7 @@ const Login = () =>{
                         <a href='#'>Forgot Password?</a>
                     </div>
                     <div class='login'>
-                        <input type="submit" value="Login"/>
+                        <input data-testid="sbutton" type="submit" value="Login"/>
                     </div>
                 </div>
             </div>
