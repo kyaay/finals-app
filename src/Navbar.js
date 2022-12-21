@@ -18,7 +18,7 @@ function Navbar(){
             </div>
             <nav>
                 <ul className='navlinks'>
-                    <li><a href='home'><i className="fa fa-home fa-2x" data-testid="home"></i></a></li>
+                    <li><a href='/'><i className="fa fa-home fa-2x" data-testid="home"></i></a></li>
                     <li><button onClick = {activeCart}><i className="fa fa-shopping-cart fa-2x"></i></button></li>
                 </ul>
             </nav>
