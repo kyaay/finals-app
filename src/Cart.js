@@ -25,10 +25,12 @@ function Cart(){
                 <div className = "sidebar-content">
                 <div className="cartbar">
                     <h1 className="featured">ITEMS IN CART</h1>
-                  </div>
+                </div>
                     <div className = "cart">
                         <div className="cartcontainer">
-                        <CartItem />
+                            {
+                                (cartList.length > 0) ? <div className="cart-list"> <CartItem /> </div>: <label>No items in cart.</label>
+                            }
                         </div>
                         <div className="cartbarfooter">
                         <h1 className="featured"></h1>
@@ -39,6 +41,7 @@ function Cart(){
                             }
                         </div>
                     </div>
+                    <button>Check Out</button>
                 </div>
             </div>
         </>
