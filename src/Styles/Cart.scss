@@ -1,36 +1,127 @@
 @import './Variables.scss';
 
+
 #sidebar {
-    margin-top: 70px;
+    margin-top: 80px;
     position: fixed;
-    width: 500px;
-    display: inline-block;
-    height: 10cm;
-    background: white ;
-    right: -500px;
+    width: 30%;
+    height: 90%;
+    background: $backgroundcolor;
+    right: -100%;
     transition: all 300ms linear;
-    padding-top: 25px;
+    padding-top: 20px;
     top: 0;
+    border: 3px solid $defaultcolor;
+    border-radius: 10px;
+    font-family: $textfont;
+    transition: all 0.8s ease;
 }
+#sidebar:hover {
+    border: 3px solid $themecolor;
+}
+
 
 #sidebar.active {
-    right: 0;
+    right: 10px;
 }
 
+.cartcontainer{
+    margin-top: -30px;
+    height: 600px;
+    width: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
 .sidebar-content {
     position: relative;
     height: 100%;
-}
-.active {
-    height: 10cm;
-    float: right;
-    width: 10cm;
-    right: 0;
-    background-color: white;
-    transition: $transitiontime;
+    padding: 0px 40px 20px 40px;
 }
 
 .inactive{
     float: right;
     right: -100%;
+}
+
+.productcart {
+    width: 400px;
+    height: 450px;
+    padding: 0px 20px 20px 20px;
+    background: #1c1c1c;
+    box-shadow: rgba(30, 80, 49, 0.35) 5px 10px 20px;;
+    margin: auto;
+    break-inside: avoid;
+    border-radius: 5px;
+
+    .prodtitle h3{
+        color:whitesmoke;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 0.1em;
+    }
+}
+
+.productcart img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: $textcolor;
+}
+
+.cartbar{
+    @include features;
+}
+.cartbar h1{
+    @include featurefont;
+}
+.cartbarfooter{
+    display: inline-block;
+    margin-top: 30px;
+    @include features;
+}
+.sidecontent{
+    padding: 0px 0px 15px 10px;
+}
+
+.cartbuttons{
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.btns {
+    padding: 10px 20px;
+    @include buttondesign;
+}
+.IncDec{
+    color:#3498db;
+}
+.btns:hover{
+    color:$themecolor;
+    border: 1px solid $themecolor;
+}
+.xbutton_container{
+    width: 100%;
+    text-align: right;
+}
+.xbutton{
+    padding: 7px;
+    margin-bottom: 3px;
+    color:#3498db;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: $transitiontime;
+}
+.xbutton:hover{
+    color: red;
+}
+.cart-total-price{
+    width: 100%;
+    margin-top: -40px;
+}
+.cart-total-price label{
+    color: $themecolor;
+    font-size: 25px;
 }

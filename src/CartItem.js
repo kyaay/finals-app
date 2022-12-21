@@ -8,16 +8,24 @@ const CartItem = () => {
             {
                 cartList.map((item, index) => {
                 return(
-                        <>
-                            {/* <img src={item.thumbnail} alt="image1" /> */}
-                            <label>Title = {item.title} </label>
-                            <label>Quantity = {item.quantity} </label>
-                            <label>Price = {item.price} </label>
-                            <button onClick = {() => decreaseQuantity(item)}>DECREASE</button>
-                            <button onClick = {() => increaseQuantity(item)}>INCREASE</button>
-                            <button onClick = {() => removeFromCart(item)}>REMOVE</button>
-                            <br></br>
-                        </>
+                        <div className='sidecontent'>
+                            <div className='productcart'>
+                                <div className='xbutton_container'>
+                                <button className='xbutton' onClick = {() => removeFromCart(item)}>✕</button>
+                                </div>
+                                <img src = {item.thumbnail} alt = "image1"></img>      
+                                <div className='prodtitle'>
+                                    <h3 data-testid="prodtitle">{item.title} </h3>
+                                </div>
+                                <div className='price'>
+                                    <label data-testid="price">Price: ${item.price}.00 </label>
+                                </div>
+                                <div className='cartbuttons'>
+                                <button className='btns IncDec' onClick = {() => increaseQuantity(item)}>INCREASE</button>
+                                    <button className='btns IncDec' onClick = {() => decreaseQuantity(item)}>DECREASE</button>
+                                </div>
+                            </div>
+                        </div>
                     )
                 })
             }

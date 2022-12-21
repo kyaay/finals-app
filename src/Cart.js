@@ -21,18 +21,21 @@ function Cart(){
 
     return(
         <>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
-            <h1>HELLO</h1>
             <div id = "sidebar" className={isCartActive? "active": "inactive"}>
                 <div className = "sidebar-content">
+                <div className="cartbar">
+                    <h1 className="featured">ITEMS IN CART</h1>
+                  </div>
                     <div className = "cart">
+                        <div className="cartcontainer">
                         <CartItem />
+                        </div>
+                        <div className="cartbarfooter">
+                        <h1 className="featured"></h1>
+                        </div>
                         <div className = "cart-total-price">
                             {
-                                (cartList.length > 0) ? <label>Total Price: {totalPrice} </label> : <label></label>
+                                (cartList.length > 0) ? <label className="totalprice">Total Price: {totalPrice} </label> : <label></label>
                             }
                         </div>
                     </div>

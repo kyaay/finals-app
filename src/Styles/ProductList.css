@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik+80s+Fade&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #26272b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(35, 35, 35), rgb(111, 230, 111));
+  border-radius: 6px;
+}
+
 .bodycontent {
   padding-top: 100px;
   width: 100%;
@@ -113,11 +123,11 @@
 }
 
 .btn {
+  padding: 10px 70px;
   border: 1px solid #3498db;
   background: none;
-  padding: 10px 20px;
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif, Arial, Helvetica, sans-serif;
   cursor: pointer;
   margin: 10px;
   transition: 0.8s;
@@ -127,7 +137,7 @@
   align-items: center;
 }
 
-.Add, .Buy {
+.Add {
   color: #3498db;
 }
 
