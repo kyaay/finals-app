@@ -105,3 +105,12 @@ describe("Login Page", () => {
         expect(btn).toBeInTheDocument();
     });
 });
+
+// describe("Checks if the user is valid", () => {
+//     it("returns a token", async () => {
+//         axios.post.mockResolvedValue(mockToken);
+//     })
+//     it("user is valid", async () => {
+//         axios.post.mockResolvedValueOnce(validUser);
+//     })
+// });
