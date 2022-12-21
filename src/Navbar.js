@@ -20,8 +20,7 @@ function Navbar(){
                     <li><a href='home'><i className="fa fa-home fa-2x" data-testid="home"></i></a></li>
                     <li><a href='contact-us'><i className="fa fa-address-book fa-2x" data-testid="contact"></i></a></li>
                     <li><a href='login'><i className="fa fa-user-circle fa-2x" data-testid="login"></i></a></li>
-                    <li><button><a><i className="fa fa-shopping-cart fa-2x"></i></a></button></li>
-                    {/* <li><button onClick = {activeCart}><a><i className="fa fa-shopping-cart fa-2x"></i></a><Cart /></button></li> */}
+                    <li><a href ='cart'><i className="fa fa-shopping-cart fa-2x"></i></a></li>
                 </ul>
             </nav>
         </header>

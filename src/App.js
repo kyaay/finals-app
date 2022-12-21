@@ -2,10 +2,11 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import React, { useState, useEffect } from 'react';
 import ProductList from "./ProductList";
-import products from "./products.json";
+import Data from "./products.json";
 import Login from "./login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ShowProduct from "./showProduct";
+import Cart from './Cart'
 
 //things to install in react
 // npm install sass
@@ -13,7 +14,7 @@ import ShowProduct from "./showProduct";
 export const CartContext = React.createContext();
 
 const App = () => {
-  const [productss,setProducts] = useState([]);
+  const [products,setProducts] = useState([]);
   const [cartList, setCartList] = useState([]);
   const [isCartActive, setIsCartActive] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -21,18 +22,21 @@ const App = () => {
 
 
   const getproductRequest = async () => {
-    const url = 'https://dummyjson.com/products/category/laptops';
+    setProducts(Data);
+    // const url = 'https://dummyjson.com/products/category/laptops';
     
-    await fetch (url)
-    .then(response => response.json())
-    .then(response => {
-      setProducts(response.products)
-    })
+    // await fetch (url)
+    // .then(response => response.json())
+    // .then(response => {
+    //   setProducts(response.products)
+    // })
   }
 
   function addToCart(value){
     cartList.push(value);
-    console.log(value.title);
+    console.log(cartList);
+    setCartList(cartList);
+    localStorage.setItem('listItems', JSON.stringify(cartList));
   }
 
   function activeCart(){
@@ -50,33 +54,51 @@ const App = () => {
     setTotalPrice(n);
   }
 
-  function decreaseQuantity() {
-
+  function removeFromCart(selected) {
+    const newList = cartList.filter((item) => item !== selected);
+    setCartList(newList);
+    localStorage.setItem('listItems', JSON.stringify(newList));
   }
 
-  function increaseQuantity() {
-
+  function decreaseQuantity(selected){
+    const productList = [...cartList];
+    const index = productList.indexOf(selected);
+    productList[index].quantity--;
+    setCartList(productList);
+    localStorage.setItem("cart", JSON.stringify(productList));
   }
 
-  function calculateTotalPrice(value){
-    
+  function increaseQuantity(selected){
+    const productList = [...cartList];
+    const index = productList.indexOf(selected);
+    productList[index].quantity++;
+    setCartList(productList);
+    localStorage.setItem("cart", JSON.stringify(productList));
   }
 
   useEffect(() => {
     getproductRequest();
+    let storedItems = JSON.parse(localStorage.getItem('listItems'));
+    if(storedItems){
+      setCartList(storedItems);
+    }
+
   }, []);
 
   return (
     <CartContext.Provider value = {
         {
           quantity: quantity,
-          calculate: calculateTotalPrice,
           totalPrice: totalPrice, 
           cartList: cartList, 
           isCartActive: isCartActive, 
           activeCart: activeCart,
           products: products, 
-          addToCart: addToCart
+          addToCart: addToCart,
+          removeFromCart: removeFromCart,
+          decreaseQuantity: decreaseQuantity,
+          increaseQuantity: increaseQuantity,
+          setTotalPrice: setTotalPrice
         }}
     >
       <Router>
@@ -108,10 +130,13 @@ const App = () => {
               <Navbar/>
               <Login/>
          </Route>
-      </Switch>
-     
-    </div>
-  </Router>
+         <Route path={"/cart"}>
+              <Navbar />
+              <Cart />
+         </Route>
+        </Switch>
+      </div>
+    </Router>
 
     </CartContext.Provider>
   );

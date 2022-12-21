@@ -7,6 +7,7 @@
         "discountPercentage":11.02,
         "rating":4.57,
         "stock":83,
+        "quantity": 1,
         "brand":"APPle",
         "category":"laptops",
         "thumbnail":"https://www.apple.com/v/macbook-pro-14-and-16/b/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png"
@@ -19,6 +20,7 @@
         "discountPercentage":4.15,
         "rating":4.25,
         "stock":50,
+        "quantity": 1,
         "brand":"Samsung",
         "category":"laptops",
         "thumbnail":"https://www.pngitem.com/pimgs/m/66-662205_samsung-galaxy-book-s-hd-png-download.png"
@@ -31,6 +33,7 @@
         "discountPercentage":10.23,
         "rating":4.43,
         "stock":68,
+        "quantity": 1,
         "brand":"Microsoft Surface",
         "category":"laptops",
         "thumbnail":"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4MCcc"
@@ -43,6 +46,7 @@
         "discountPercentage":11.83,
         "rating":4.54,
         "stock":96,
+        "quantity": 1,
         "brand":"Infinix",
         "category":"laptops",
         "thumbnail":"https://unbox.ph/wp-content/uploads/2021/10/Infinix-INBook-X1-2.jpg"
@@ -55,6 +59,7 @@
         "discountPercentage":6.18,
         "rating":4.43,
         "stock":89,
+        "quantity": 1,
         "brand":"HP Pavilion",
         "category":"laptops",
         "thumbnail":"https://www.notebookcheck.net/fileadmin/Notebooks/HP/Pavilion_Gaming_15-ec1206ng/4zu3_HP_Pavilion_Gaming_15_ec.jpg"
@@ -67,6 +72,7 @@
         "discountPercentage":7.18,
         "rating":4.45,
         "stock":43,
+        "quantity": 1,
         "brand":"Acer",
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71os19334GL._AC_SX679_.jpg"
@@ -79,6 +85,7 @@
         "discountPercentage":9.15,
         "rating":4.15,
         "stock":51,
+        "quantity": 1,
         "brand":"Acer",
         "category":"laptops",
         "thumbnail":"https://ph-test-11.slatic.net/p/087cb6d828b679768d398ad354f9d53c.jpg"
@@ -91,6 +98,7 @@
         "discountPercentage":5.15,
         "rating":4.11,
         "stock":29,
+        "quantity": 1,
         "brand":"Asus",
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/I/71sgAr9atBS._AC_SX679_.jpg"
@@ -103,6 +111,7 @@
         "discountPercentage":7.15,
         "rating":4.21,
         "stock":62,
+        "quantity": 1,
         "brand":"Asus",
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/I/71ZvzhgX3jL._AC_SX425_.jpg"
@@ -115,6 +124,7 @@
         "discountPercentage":10.05,
         "rating":4.20,
         "stock":47,
+        "quantity": 1,
         "brand":"Asus",
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/I/71z88MjLTnL._AC_SX679_.jpg"
@@ -127,6 +137,7 @@
         "discountPercentage":11.05,
         "rating":4.30,
         "stock":38,
+        "quantity": 1,
         "brand":"Dell",
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/I/71PHRSLzjlL._AC_SY450_.jpg"
@@ -139,6 +150,7 @@
         "discountPercentage":3.05,
         "rating":3.30,
         "stock":13,
+        "quantity": 1,
         "brand":"Dell",
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/I/81C0m3LkN5L._AC_SX450_.jpg"
