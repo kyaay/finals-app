@@ -2,6 +2,8 @@ import { waitFor, render, screen } from '@testing-library/react';
 import Navbar from './Navbar';
 import ProductList from './ProductList';
 import Login from './login';
+import Cart from './Cart';
+import CartItem from './CartItem';
 // import axios from "axios";
 
 // jest.mock("axios");
@@ -94,6 +96,36 @@ describe("Login Page", () => {
     });
 });
 
+describe("shows the cart", () => {
+    it("check out", () => {
+        render(<Cart />);
+        const container = screen.getByTestId("cart");
+        expect(container).toBeInTheDocument();
+    });
+});
+
+describe("shows the cart items", () => {
+    it("has a button container", () => {
+        render(<CartItem />);
+        const container = screen.getByTestId("xbutton_container");
+        expect(container).toBeInTheDocument();
+    });
+    it("has a delete button", () => {
+        render(<CartItem />);
+        const btn = screen.getByTestId("xbutton");
+        expect(btn).toBeInTheDocument();
+    });
+    it("has a increase button", () => {
+        render(<CartItem />);
+        const btn = screen.getByTestId("btns IncDec");
+        expect(btn).toBeInTheDocument();
+    });
+    it("has a decrease button", () => {
+        render(<CartItem />);
+        const btn = screen.getByTestId("btns IncDec");
+        expect(btn).toBeInTheDocument();
+    });
+});
 // describe("Checks if the user is valid", () => {
 //     it("returns a token", async () => {
 //         axios.post.mockResolvedValue(mockToken);
