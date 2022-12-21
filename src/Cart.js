@@ -2,6 +2,7 @@ import { Offcanvas, Stack } from "react-bootstrap";
 import React, { useEffect } from 'react';
 import { CartContext } from './App'
 import CartItem from './CartItem'
+import Login from './login'
 import './Styles/Cart.scss';
 
 function Cart(){
@@ -42,7 +43,7 @@ function Cart(){
                         </div>
                     </div>
                     <div className='prodbutton'>
-                        <button className="btn Add">Check Out</button>
+                        <a href='/login'><i className="fa fa-home fa-2x" data-testid="home"></i></a>
                     </div>
                 </div>
             </div>

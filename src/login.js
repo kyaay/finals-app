@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { CartContext } from './App';
 import App from './App'
-// import axios from 'axios'
+import axios from 'axios'
 import './Styles/login.scss';
 
 const Login = () =>{
@@ -36,6 +36,7 @@ const Login = () =>{
                 console.log(response.data);
                 setMessage("");
                 setLoginStatus(true);
+                alert("Successfully purchased product!");
             }
         } catch (error) {
             setMessage("Invalid email and password.");
