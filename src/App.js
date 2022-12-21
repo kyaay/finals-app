@@ -5,7 +5,6 @@ import ProductList from "./ProductList";
 import Data from "./products.json";
 import Login from "./login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ShowProduct from "./showProduct";
 import Cart from './Cart'
 
 //things to install in react
@@ -103,10 +102,10 @@ const App = () => {
     >
       <Router>
       <div className="App">
+      <Navbar/>
       <Switch>
-        <Route path={"/home"}>
+        <Route exact path={"/"} >
           <div className="Home">
-            <Navbar/>
               <div className="container">
                   <div className="bodycontent">
                     <h1 className="featured">Featured Products</h1>
@@ -121,17 +120,10 @@ const App = () => {
             <Footer/>
             </div>
          </Route>
-        <Route path={"/buy"}>
-              <Navbar/>
-              <ShowProduct />
-              <Footer/>
-         </Route>
-         <Route path={"/login"}>
-              <Navbar/>
+         <Route exact path={"/login"}>
               <Login/>
          </Route>
-         <Route path={"/cart"}>
-              <Navbar />
+         <Route exact path={"/cart"}>
               <Cart />
          </Route>
         </Switch>

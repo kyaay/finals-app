@@ -26,7 +26,6 @@ const ProductList = ({products}) => {
                             </div>
                             <div className='prodbutton'>
                                 <button className="btn Add" onClick = {() => addToCart(product)}>Add to Cart</button>
-                                <a data-testid="prodbutton" className="btn Buy" onClick={() => {history.push('/buy')}}>Buy Now</a>
                             </div>
                         </div>)
                     }
