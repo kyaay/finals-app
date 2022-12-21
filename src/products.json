@@ -164,6 +164,7 @@
         "discountPercentage":9.05,
         "rating":3.30,
         "stock":23,
+        "quantity": 1,
         "brand":"Samsung",
         "category":"laptops",
         "thumbnail":"https://img.global.news.samsung.com/global/wp-content/uploads/2022/02/Galaxy_Book2_Pro_PR_main1.jpg"
@@ -176,6 +177,7 @@
         "discountPercentage":1.05,
         "rating":3.31,
         "stock":25,
+        "quantity": 1,
         "brand":"Asus",
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71YSus5TYbL._AC_SX679_.jpg"
@@ -188,6 +190,7 @@
         "discountPercentage":1.05,
         "rating":4.31,
         "stock":20,
+        "quantity": 1,
         "brand":"Asus",
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71AGOX9MORL._AC_SX425_.jpg"
@@ -200,6 +203,7 @@
         "discountPercentage":1.05,
         "rating":3.35,
         "stock":30,
+        "quantity": 1,
         "brand":"Asus",
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81M8GzQqKkL._AC_SX679_.jpg"

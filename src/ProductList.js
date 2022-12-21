@@ -3,10 +3,10 @@ import React from 'react'
 import { CartContext } from './App';
 import './Styles/ProductList.scss';
 
-const ProductList = ({products}) => {
-    const {addToCart} = React.useContext(CartContext);
-    let history = useHistory();
-    return (
+const ProductList = () => {
+    const {searchList, products, addToCart, searchValue} = React.useContext(CartContext);
+
+    return (searchList.length === 0) ? (
         <div className = "product-list" data-testid="product-list">
             {
                 products?.map((product,index) => {
@@ -30,6 +30,32 @@ const ProductList = ({products}) => {
                         </div>)
                     }
                 )
+            }
+        </div>
+    ) : (
+        <div className = "search-list">
+            {
+                searchList.map((product, index) => {
+                    return (
+                        <div className = "product" key = {index}>
+                            <div className='overlaycontainer'>
+                                <img src = {product.thumbnail} alt = "image1"></img>
+                                <div className='overlay'>
+                                    <div className='sampleText'><h3>Product description:</h3><p> {product.description}</p></div>                                
+                                </div>
+                            </div>
+                            <div className='prodtitle'>
+                                <h3 data-testid="prodtitle">{product.title} </h3>
+                            </div>
+                            <div className='price'>
+                                <label data-testid="price">Price: ${product.price}.00 </label>
+                            </div>
+                            <div className='prodbutton'>
+                                <button className="btn Add" onClick = {() => addToCart(product)}>Add to Cart</button>
+                            </div>
+                        </div>
+                    )
+                })
             }
         </div>
     )

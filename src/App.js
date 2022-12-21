@@ -15,30 +15,33 @@ export const CartContext = React.createContext();
 const App = () => {
   const [products,setProducts] = useState([]);
   const [cartList, setCartList] = useState([]);
-  const [isCartActive, setIsCartActive] = useState(true);
+  const [isCartActive, setIsCartActive] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [loginStatus, setLoginStatus] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
+  const [searchList, setSearchList] = useState([]);
 
   const activeCart = () => setIsCartActive(!isCartActive);
+  const openCart = () => setIsCartActive(true);
 
   const getproductRequest = async () => {
     setProducts(Data);
-    // const url = 'https://dummyjson.com/products/category/laptops';
-    
-    // await fetch (url)
-    // .then(response => response.json())
-    // .then(response => {
-    //   setProducts(response.products)
-    // })
   }
 
-  function addToCart(value){
-    const newList = [...cartList];
-    newList.push(value);
-    setCartList(newList);
-    localStorage.setItem('listItems', JSON.stringify(cartList));
+  function addToCart(selected){
+    if(cartList.indexOf(selected) === -1){
+      const newList = [...cartList];
+      newList.push(selected);
+      setCartList(newList);
+      localStorage.setItem('listItems', JSON.stringify(newList));
+    }
+    openCart();
   }
 
   function removeFromCart(selected) {
+    const index = cartList.indexOf(selected);
+    cartList[index].quantity = 1;
+
     const newList = cartList.filter((item) => item !== selected);
     setCartList(newList);
     localStorage.setItem('listItems', JSON.stringify(newList));
@@ -47,9 +50,13 @@ const App = () => {
   function decreaseQuantity(selected){
     const productList = [...cartList];
     const index = productList.indexOf(selected);
-    productList[index].quantity--;
-    setCartList(productList);
-    localStorage.setItem("cart", JSON.stringify(productList));
+    if(productList[index].quantity - 1 > 0){
+      productList[index].quantity--;
+      setCartList(productList);
+      localStorage.setItem("cart", JSON.stringify(productList));
+    } else {
+      removeFromCart(selected);
+    }
   }
 
   function increaseQuantity(selected){
@@ -66,12 +73,14 @@ const App = () => {
     if(storedItems){
       setCartList(storedItems);
     }
-
   }, []);
 
   return (
     <CartContext.Provider value = {
         {
+          searchList: searchList,
+          loginStatus: loginStatus,
+          setLoginStatus: setLoginStatus,
           totalPrice: totalPrice, 
           cartList: cartList, 
           isCartActive: isCartActive, 
@@ -81,7 +90,8 @@ const App = () => {
           removeFromCart: removeFromCart,
           decreaseQuantity: decreaseQuantity,
           increaseQuantity: increaseQuantity,
-          setTotalPrice: setTotalPrice
+          setTotalPrice: setTotalPrice,
+          searchValue: searchValue,
         }}
     >
       <Router>
