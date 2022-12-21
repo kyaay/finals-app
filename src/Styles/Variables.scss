@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik+80s+Fade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
 //Fonts
-$titlefont: Arial, Helvetica, sans-serif;
 $logofont: 'Rubik 80s Fade', cursive;
-$textfont: 'Poppins', sans-serif;
+$textfont: 'Poppins', sans-serif,Arial, Helvetica, sans-serif;
 
 //Colors
 $navcolor: rgb(35, 35, 35);
 $themecolor: rgb(111, 230, 111);
 $defaultcolor: rgb(100, 100, 100);
+$backgroundcolor:#26272b;
 $featuredcolor: #bbb;
 $textcolor: #fff;
 
@@ -23,8 +23,32 @@ $textcolor: #fff;
     font-weight: 300;
     letter-spacing: 0.1em;
 }
+
+@mixin buttondesign{
+    border: 1px solid #3498db;
+    background: none;
+    font-size:  20px;
+    font-family: $textfont;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
+}
 //transition time
 $transitiontime: all 0.3s ease;
 
 //span design
 $span_padding : 30px 10px 10px;
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #26272b;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient( $navcolor,$themecolor);
+    border-radius: 6px;
+}
