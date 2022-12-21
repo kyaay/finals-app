@@ -39,7 +39,7 @@ const Login = () =>{
                 alert("Successfully purchased product!");
             }
         } catch (error) {
-            alert("Invalid email and password!!");
+            alert("ERROR: Invalid email and password!!");
             console.log(error);
         }
     }
