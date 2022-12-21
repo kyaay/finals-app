@@ -37,18 +37,6 @@ describe("Check if there is a nav bar", () => {
       expect(home).toBeInTheDocument();
     });
 
-    it("has a contact us button", () => {
-      render(<Navbar />);
-      const contact_us = screen.getByTestId('contact').closest('i').closest('a');
-      expect(contact_us).toBeInTheDocument();
-    });
-
-    // it("has a profile button", () => {
-    //   render(<Navbar />);
-    //   const profile = screen.getByTestId('profile').closest('i').closest('a');
-    //   expect(profile).toBeInTheDocument();
-    // });
-
     // it("has an add to card", () => {
     //   render(<Navbar />);
     //   const cart = screen.getByTestId('cart').closest('i').closest('a');
@@ -64,28 +52,28 @@ describe("shows the list of products", () => {
         expect(container).toBeInTheDocument();
     });
 
-    it("contains picture of the product", () => {
-        render(<ProductList />);
-        const displayPic = screen.queryByAltText("image1");
-        waitFor(() => expect(displayPic).toBeTruthy());
-    });
+    // it("contains picture of the product", () => {
+    //     render(<ProductList />);
+    //     const displayPic = screen.queryByAltText("image1");
+    //     waitFor(() => expect(displayPic).toBeTruthy());
+    // });
 
-    it("contains the product title", () => {
-        render(<ProductList />);
-        const title = screen.queryByTestId("prodtitle");
-        waitFor(() => expect(title).toBeInTheDocument());
-    });
+    // it("contains the product title", () => {
+    //     render(<ProductList />);
+    //     const title = screen.queryByTestId("prodtitle");
+    //     waitFor(() => expect(title).toBeInTheDocument());
+    // });
 
-    it("contains the price", () => {
-        render(<ProductList />);
-        const price = screen.queryByTestId("price");
-        waitFor(() => expect(price).toBeInTheDocument());
-    });
-    it("contains a button", () => {
-        render(<ProductList />);
-        const button = screen.queryByTestId("prodbutton");
-        waitFor(() => expect(button).toBeInTheDocument());
-    })
+    // it("contains the price", () => {
+    //     render(<ProductList />);
+    //     const price = screen.queryByTestId("price");
+    //     waitFor(() => expect(price).toBeInTheDocument());
+    // });
+    // it("contains a button", () => {
+    //     render(<ProductList />);
+    //     const button = screen.queryByTestId("prodbutton");
+    //     waitFor(() => expect(button).toBeInTheDocument());
+    // })
 });
 
 describe("Login Page", () => {
