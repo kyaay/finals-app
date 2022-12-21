@@ -39,7 +39,7 @@ const Login = () =>{
                 alert("Successfully purchased product!");
             }
         } catch (error) {
-            setMessage("Invalid email and password.");
+            alert("Invalid email and password!!");
             console.log(error);
         }
     }
@@ -78,7 +78,7 @@ const Login = () =>{
                         <a href='#'>Forgot Password?</a>
                     </div>
                     <div class='login'>
-                        <input data-testid="sbutton" type="submit" value="Login" onClick = {handleLogin}/>
+                    <input  data-testid="sbutton" type="submit" value="Login" onClick = {handleLogin}/>
                     </div>
                 </div>
             </div>

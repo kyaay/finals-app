@@ -43,7 +43,7 @@ function Cart(){
                         </div>
                     </div>
                     <div className='prodbutton'>
-                        <a href='/login'><i className="fa fa-home fa-2x" data-testid="home"></i></a>
+                        <a className="btn Add" href='/login'>Check Out</a>
                     </div>
                 </div>
             </div>
