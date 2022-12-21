@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { CartContext } from './App';
 import App from './App'
-import axios from 'axios'
+// import axios from 'axios'
 import './Styles/login.scss';
 
 const Login = () =>{

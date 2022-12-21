@@ -9,7 +9,7 @@ const Footer = () => {
                 <div class="row">
                     <div class="footer-col">
                         <h4>Techno Inc.</h4>
-                        <ul>
+                        <ul data-testid="list-brands">
                             <li><a href='lenovo'>Lenovo</a></li>
                             <li><a href='Ace'>Ace</a></li>
                             <li><a href='Asus'>Asus</a></li>
@@ -17,7 +17,7 @@ const Footer = () => {
                     </div>
                     <div class="footer-col">
                         <h4>Support</h4>
-                        <ul>
+                        <ul data-testid="support">
                             <li><a href='/discord'>Discord</a></li>
                             <li><a href='/facebook'>Facebook</a></li>
                             <li><a href='/instagram'>Instagram</a></li>
@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
                     <div class="footer-col">
                         <h4>Account</h4>
-                        <ul>
+                        <ul data-testid="account">
                             <li><a href='/account'>My Account</a></li>
                             <li><a href='/my_orders'>My Orders</a></li>
                             <li><a href='/my_whistlist'>My Wishlist</a></li>
@@ -39,7 +39,7 @@ const Footer = () => {
                     </div>
                     <div class="footer-col">
                           <h4>Stay Connected</h4> 
-                          <div class="social-links">
+                          <div class="social-links" data-testid="social">
                             <a href='home'><i class="fa fa-facebook fa-1x"></i></a>
                             <a href='contact-us'><i class="fa fa-google fa-1x"></i></a>
                             <a href='profile'><i class="fa fa-twitter fa-1x"></i></a>
