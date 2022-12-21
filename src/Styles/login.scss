@@ -11,7 +11,7 @@
     align-items: center;
     min-height: 100vh;
     background: #23242a;
-    font-family: $loginfont;
+    font-family: $textfont;
 }
 .box {
     position: relative;
@@ -77,7 +77,7 @@
     position: relative;
     width: 100%;
     padding: $span_padding;
-    font-family: $loginfont;
+    font-family: $textfont;
     background: transparent;
     border: none;
     outline: none;
