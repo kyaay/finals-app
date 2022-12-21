@@ -1,5 +1,6 @@
-// import { waitFor, render, screen } from '@testing-library/react';
-// import Navbar from './Navbar';
+import { waitFor, render, screen } from '@testing-library/react';
+import { CartContext, activeCart } from './App';
+import Navbar from './Navbar';
 // import ProductList from './ProductList';
 // import Login from './login';
 // import Cart from './Cart';
@@ -16,40 +17,43 @@
 // //   'password': 'cityslicka'
 // // }
 
-// describe("Check if there is a nav bar", () => {
-//     it("has a logo", () => {
-//       render(<Navbar />);
-//       const mycontext = useContext("");
-//       const displayLogo = screen.getByTestId("logo");
-//       expect(displayLogo).toBeInTheDocument();
-//         // const displaylogo = document.createElement('img');
+describe("Check if there is a nav bar", () => {
+    it("checks the cart button", () => {
+      const CartComponent = () => {
+        const { activeCart } = React.useContext(CartContext)
+
+        return <>
+            <div>{activeCart}</div>.
+        </>
+      }
+         // const displaylogo = document.createElement('img');
 
 
-//       // if logo is an image
-//       // const displayLogo = document.querySelector("img");
-//       // expect(displayLogo.src).toContain("logo");
-//     });
+      // if logo is an image
+      // const displayLogo = document.querySelector("img");
+      // expect(displayLogo.src).toContain("logo");
+    });
 
-//     //this test cannot search yet, only input
-//     // it("has a search bar", () => {
-//     //   render(<Navbar />);
-//     //   const search = screen.getByTestId("inputBox");
-//     //   expect(search).toBeInTheDocument();
-//     // });
+    //this test cannot search yet, only input
+    // it("has a search bar", () => {
+    //   render(<Navbar />);
+    //   const search = screen.getByTestId("inputBox");
+    //   expect(search).toBeInTheDocument();
+    // });
 
-//     // it("has a home button", () => {
-//     //   render(<Navbar />);
-//     //   const home = screen.getByTestId('home').closest('i').closest('a');
-//     //   expect(home).toBeInTheDocument();
-//     // });
+    // it("has a home button", () => {
+    //   render(<Navbar />);
+    //   const home = screen.getByTestId('home').closest('i').closest('a');
+    //   expect(home).toBeInTheDocument();
+    // });
 
-//     // it("has an add to card", () => {
-//     //   render(<Navbar />);
-//     //   const cart = screen.getByTestId('cart').closest('i').closest('a');
-//     //   expect(cart).toBeInTheDocument();
-//     // });
+    // it("has an add to card", () => {
+    //   render(<Navbar />);
+    //   const cart = screen.getByTestId('cart').closest('i').closest('a');
+    //   expect(cart).toBeInTheDocument();
+    // });
 
-// });
+}); 
 
 // // describe("shows the list of products", () => {
 // //     it("container of all the products", () => {
