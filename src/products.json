@@ -143,5 +143,55 @@
         "category":"laptops",
         "thumbnail":"https://m.media-amazon.com/images/I/81C0m3LkN5L._AC_SX450_.jpg"
     }
+    ,
+    {
+        "id":13,
+        "title":"Galaxy Book2 Pro Laptop",
+        "description":"SAMSUNG 15.6” Galaxy Book2 Pro Laptop Computer, i7 / 16GB / 512GB, 12th Gen Intel Core Processor, Evo Certified, Lightweight, 2022 Model, Graphite",
+        "price":1149.00,
+        "discountPercentage":9.05,
+        "rating":3.30,
+        "stock":23,
+        "brand":"Samsung",
+        "category":"laptops",
+        "thumbnail":"https://img.global.news.samsung.com/global/wp-content/uploads/2022/02/Galaxy_Book2_Pro_PR_main1.jpg"
+    },
+    {
+        "id":14,
+        "title":"ROG Strix G17",
+        "description":"ROG Strix G17 Gaming Laptop, 17.3 144Hz 3ms FHD IPS Level, NVIDIA GeForce RTX 2070, Intel Core i7-10750H Processor, 16GB DDR4, 512GB PCIe SSD",
+        "price":1485.00,
+        "discountPercentage":1.05,
+        "rating":3.31,
+        "stock":25,
+        "brand":"Asus",
+        "category":"laptops",
+        "thumbnail":"https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71YSus5TYbL._AC_SX679_.jpg"
+    },
+    {
+        "id":15,
+        "title":"ASUS TUF Dash 15",
+        "description":"ASUS TUF Dash 15 (2022) Gaming Laptop, 15.6 144Hz FHD Display, Intel Core i7-12650H, GeForce RTX 3060, 16GB DDR5, 512GB SSD, Windows 11 Home",
+        "price":1289.00,
+        "discountPercentage":1.05,
+        "rating":4.31,
+        "stock":20,
+        "brand":"Asus",
+        "category":"laptops",
+        "thumbnail":"https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71AGOX9MORL._AC_SX425_.jpg"
+    },
+    {
+        "id":16,
+        "title":"ASUS TUF Gaming F15",
+        "description":"ASUS TUF Gaming F15 Gaming Laptop, 15.6 144Hz FHD IPS-Type Display,i7-11800H Processor, GeForce RTX 3050 Ti, 16GB DDR4 RAM, 512GB PCIe SSD,Windows 11",
+        "price":1323.00,
+        "discountPercentage":1.05,
+        "rating":3.35,
+        "stock":30,
+        "brand":"Asus",
+        "category":"laptops",
+        "thumbnail":"https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/81M8GzQqKkL._AC_SX679_.jpg"
+    }
+
     
 ]

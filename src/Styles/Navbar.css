@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Rubik+80s+Fade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik+80s+Fade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   background: #26272b;
 }
 
@@ -80,6 +80,8 @@ nav {
   font-family: "Rubik 80s Fade", cursive;
   color: rgb(111, 230, 111);
   padding-left: 40px;
+  font-weight: 400;
+  font-size: 2.7em;
 }
 
 .navlinks button {
