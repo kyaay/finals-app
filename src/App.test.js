@@ -88,20 +88,20 @@ describe("shows the list of products", () => {
     })
 });
 
-// describe("Login Page", () => {
-//     it("has an input for email", () => {
-//         render(<Login />);
-//         const email = screen.getByTestId("email");
-//         expect(email).toBeInTheDocument();
-//     });
-//     it("has an input for password", () => {
-//         render(<Login />);
-//         const password = screen.getByTestId("password");
-//         expect(password).toBeInTheDocument();
-//     });
-//     it("has a submit button", () => {
-//         render(<Login />);
-//         const email = screen.getByTestId("email");
-//         expect(email).toBeInTheDocument();
-//     });
-// });
+describe("Login Page", () => {
+    it("has an input for email", () => {
+        render(<Login />);
+        const email = screen.getByTestId("email");
+        expect(email).toBeInTheDocument();
+    });
+    it("has an input for password", () => {
+        render(<Login />);
+        const password = screen.getByTestId("password");
+        expect(password).toBeInTheDocument();
+    });
+    it("has a submit button", () => {
+        render(<Login />);
+        const btn = screen.getByTestId("sbutton");
+        expect(btn).toBeInTheDocument();
+    });
+});
